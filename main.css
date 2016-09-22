@@ -1,4 +1,167 @@
+/* line 1, D:/Michal/Programovani/thetopfer_website/main.scss */
 html, body {
-    padding: 0px;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+/* line 7, D:/Michal/Programovani/thetopfer_website/main.scss */
+nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 60px;
+  background: var(--s4);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300; }
+
+/* line 19, D:/Michal/Programovani/thetopfer_website/main.scss */
+#logo {
+  margin-left: 10px;
+  width: 120px;
+  margin-right: 10px; }
+
+/* line 25, D:/Michal/Programovani/thetopfer_website/main.scss */
+.logoimg {
+  height: 100%; }
+
+/* line 29, D:/Michal/Programovani/thetopfer_website/main.scss */
+#social {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 300px;
+  height: 60px;
+  margin-right: 10px;
+  margin-left: 10px; }
+  /* line 38, D:/Michal/Programovani/thetopfer_website/main.scss */
+  #social .socialimg {
+    height: calc(100% - 10px);
+    margin: 5px; }
+
+/* line 45, D:/Michal/Programovani/thetopfer_website/main.scss */
+#menu {
+  position: relative;
+  list-style-type: none;
+  top: -100%;
+  left: 180px;
+  right: 320px;
+  margin: 0px;
+  padding: 0px;
+  background: var(--s4);
+  height: 60px;
+  z-index: 10;
+  float: left;
+  display: inline-block; }
+  /* line 59, D:/Michal/Programovani/thetopfer_website/main.scss */
+  #menu > li {
+    position: relative;
     margin: 0px;
-}
+    padding: 15px 30px;
+    height: 30px;
+    line-height: 30px;
+    min-width: 100px;
+    top: 0px;
+    transition: 0.5s;
+    background: inherit;
+    float: left;
+    display: block; }
+  /* line 74, D:/Michal/Programovani/thetopfer_website/main.scss */
+  #menu > li:hover {
+    background: var(--s2); }
+  /* line 78, D:/Michal/Programovani/thetopfer_website/main.scss */
+  #menu > li a {
+    position: relative;
+    background: inherit;
+    top: 0px;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: 0px;
+    padding: 0px; }
+
+/* line 94, D:/Michal/Programovani/thetopfer_website/main.scss */
+.innermenu {
+  position: absolute;
+  list-style-type: none;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 0;
+  perspective: 1000px; }
+  /* line 103, D:/Michal/Programovani/thetopfer_website/main.scss */
+  .innermenu li {
+    background: var(--s6);
+    display: none;
+    padding: 10px 15px;
+    transition: 0.5s; }
+  /* line 111, D:/Michal/Programovani/thetopfer_website/main.scss */
+  .innermenu li:hover {
+    background: var(--s4); }
+
+/* line 120, D:/Michal/Programovani/thetopfer_website/main.scss */
+#menu li:hover > ul.innermenu li {
+  display: block;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+  opacity: 0; }
+  /* line 126, D:/Michal/Programovani/thetopfer_website/main.scss */
+  #menu li:hover > ul.innermenu li:nth-child(1) {
+    animation-name: menu;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0ms; }
+  /* line 126, D:/Michal/Programovani/thetopfer_website/main.scss */
+  #menu li:hover > ul.innermenu li:nth-child(2) {
+    animation-name: menu;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 300ms; }
+  /* line 126, D:/Michal/Programovani/thetopfer_website/main.scss */
+  #menu li:hover > ul.innermenu li:nth-child(3) {
+    animation-name: menu;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 600ms; }
+  /* line 126, D:/Michal/Programovani/thetopfer_website/main.scss */
+  #menu li:hover > ul.innermenu li:nth-child(4) {
+    animation-name: menu;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 900ms; }
+  /* line 126, D:/Michal/Programovani/thetopfer_website/main.scss */
+  #menu li:hover > ul.innermenu li:nth-child(5) {
+    animation-name: menu;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1200ms; }
+  /* line 126, D:/Michal/Programovani/thetopfer_website/main.scss */
+  #menu li:hover > ul.innermenu li:nth-child(6) {
+    animation-name: menu;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1500ms; }
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg); }
+  60% {
+    opacity: 1;
+    transform: rotateX(30deg); }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg); } }
+
+/*# sourceMappingURL=main.css.map */

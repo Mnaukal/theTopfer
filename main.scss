@@ -1,0 +1,151 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+    background: var(--s4);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+#logo {
+    margin-left: 10px;
+    width: 120px;
+    margin-right: 10px;
+}
+
+.logoimg {
+    height: 100%;
+}
+
+#social {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 300px;
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+    .socialimg {
+        height: calc(100% - 10px);
+        margin: 5px;
+    }
+}
+
+
+#menu {
+    position: relative;
+    list-style-type: none; 
+    top: -100%;
+    left: 180px;
+    right: 320px;
+    margin: 0px;
+    padding: 0px;
+    background: var(--s4);
+    height: 60px;
+    z-index: 10;
+    float: left;
+    display: inline-block;
+
+    > li {
+        position: relative;
+        margin: 0px;
+        padding: 15px 30px;
+        height: 30px;
+        line-height: 30px;
+        //width: 180px;
+        min-width: 100px;
+        top: 0px;
+        transition: 0.5s;
+        background: inherit;
+        float: left;
+        display: block;
+    }
+
+    > li:hover {
+        background: var(--s2);
+    }
+
+    > li a {
+        position: relative;
+        background: inherit;
+        top: 0px;
+        font-size: 1.5em;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        display: block;
+        height: 100%;
+        width: auto;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+.innermenu {
+    position: absolute;
+    list-style-type: none;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    padding: 0;
+    perspective: 1000px;
+
+    li {
+        background: var(--s6);
+        display: none;
+        padding: 10px 15px;
+        //width: 210px;
+        transition: 0.5s;
+    }
+    
+    li:hover {
+        background: var(--s4);
+    }
+
+    li a {
+
+    }
+}
+
+#menu li:hover > ul.innermenu li {
+    display: block;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    opacity: 0;
+    
+    @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {    
+            animation-name: menu;
+            animation-duration: 500ms;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;   
+            animation-delay: 300ms * $i - 300;     
+        }
+    }
+}
+
+@keyframes menu {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+    60% {
+        opacity: 1;
+        transform: rotateX(30deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+
