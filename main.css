@@ -5,6 +5,13 @@ html, body {
   font-family: 'Source Sans Pro', sans-serif; }
 
 /* line 7, D:/Michal/Programovani/thetopfer_website/main.scss */
+main {
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  z-index: 1; }
+
+/* line 14, D:/Michal/Programovani/thetopfer_website/main.scss */
 nav {
   position: fixed;
   top: 0px;
@@ -14,19 +21,20 @@ nav {
   background: var(--s4);
   color: white;
   text-transform: uppercase;
-  font-weight: 300; }
+  font-weight: 300;
+  z-index: 2; }
 
-/* line 19, D:/Michal/Programovani/thetopfer_website/main.scss */
+/* line 27, D:/Michal/Programovani/thetopfer_website/main.scss */
 #logo {
   margin-left: 10px;
   width: 120px;
   margin-right: 10px; }
 
-/* line 25, D:/Michal/Programovani/thetopfer_website/main.scss */
+/* line 33, D:/Michal/Programovani/thetopfer_website/main.scss */
 .logoimg {
   height: 100%; }
 
-/* line 29, D:/Michal/Programovani/thetopfer_website/main.scss */
+/* line 37, D:/Michal/Programovani/thetopfer_website/main.scss */
 #social {
   position: absolute;
   top: 0px;
@@ -35,12 +43,12 @@ nav {
   height: 60px;
   margin-right: 10px;
   margin-left: 10px; }
-  /* line 38, D:/Michal/Programovani/thetopfer_website/main.scss */
+  /* line 46, D:/Michal/Programovani/thetopfer_website/main.scss */
   #social .socialimg {
     height: calc(100% - 10px);
     margin: 5px; }
 
-/* line 45, D:/Michal/Programovani/thetopfer_website/main.scss */
+/* line 53, D:/Michal/Programovani/thetopfer_website/main.scss */
 #menu {
   position: relative;
   list-style-type: none;
@@ -54,7 +62,7 @@ nav {
   z-index: 10;
   float: left;
   display: inline-block; }
-  /* line 59, D:/Michal/Programovani/thetopfer_website/main.scss */
+  /* line 67, D:/Michal/Programovani/thetopfer_website/main.scss */
   #menu > li {
     position: relative;
     margin: 0px;
@@ -67,10 +75,10 @@ nav {
     background: inherit;
     float: left;
     display: block; }
-  /* line 74, D:/Michal/Programovani/thetopfer_website/main.scss */
+  /* line 82, D:/Michal/Programovani/thetopfer_website/main.scss */
   #menu > li:hover {
     background: var(--s2); }
-  /* line 78, D:/Michal/Programovani/thetopfer_website/main.scss */
+  /* line 86, D:/Michal/Programovani/thetopfer_website/main.scss */
   #menu > li a {
     position: relative;
     background: inherit;
@@ -85,7 +93,7 @@ nav {
     margin: 0px;
     padding: 0px; }
 
-/* line 94, D:/Michal/Programovani/thetopfer_website/main.scss */
+/* line 102, D:/Michal/Programovani/thetopfer_website/main.scss */
 .innermenu {
   position: absolute;
   list-style-type: none;
@@ -94,58 +102,58 @@ nav {
   width: 100%;
   padding: 0;
   perspective: 1000px; }
-  /* line 103, D:/Michal/Programovani/thetopfer_website/main.scss */
+  /* line 111, D:/Michal/Programovani/thetopfer_website/main.scss */
   .innermenu li {
     background: var(--s6);
     display: none;
     padding: 10px 15px;
     transition: 0.5s; }
-  /* line 111, D:/Michal/Programovani/thetopfer_website/main.scss */
+  /* line 119, D:/Michal/Programovani/thetopfer_website/main.scss */
   .innermenu li:hover {
     background: var(--s4); }
 
-/* line 120, D:/Michal/Programovani/thetopfer_website/main.scss */
+/* line 128, D:/Michal/Programovani/thetopfer_website/main.scss */
 #menu li:hover > ul.innermenu li {
   display: block;
   transform-origin: top;
   transform: rotateX(-90deg);
   opacity: 0; }
-  /* line 126, D:/Michal/Programovani/thetopfer_website/main.scss */
+  /* line 134, D:/Michal/Programovani/thetopfer_website/main.scss */
   #menu li:hover > ul.innermenu li:nth-child(1) {
     animation-name: menu;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-delay: 0ms; }
-  /* line 126, D:/Michal/Programovani/thetopfer_website/main.scss */
+  /* line 134, D:/Michal/Programovani/thetopfer_website/main.scss */
   #menu li:hover > ul.innermenu li:nth-child(2) {
     animation-name: menu;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-delay: 300ms; }
-  /* line 126, D:/Michal/Programovani/thetopfer_website/main.scss */
+  /* line 134, D:/Michal/Programovani/thetopfer_website/main.scss */
   #menu li:hover > ul.innermenu li:nth-child(3) {
     animation-name: menu;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-delay: 600ms; }
-  /* line 126, D:/Michal/Programovani/thetopfer_website/main.scss */
+  /* line 134, D:/Michal/Programovani/thetopfer_website/main.scss */
   #menu li:hover > ul.innermenu li:nth-child(4) {
     animation-name: menu;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-delay: 900ms; }
-  /* line 126, D:/Michal/Programovani/thetopfer_website/main.scss */
+  /* line 134, D:/Michal/Programovani/thetopfer_website/main.scss */
   #menu li:hover > ul.innermenu li:nth-child(5) {
     animation-name: menu;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-delay: 1200ms; }
-  /* line 126, D:/Michal/Programovani/thetopfer_website/main.scss */
+  /* line 134, D:/Michal/Programovani/thetopfer_website/main.scss */
   #menu li:hover > ul.innermenu li:nth-child(6) {
     animation-name: menu;
     animation-duration: 500ms;
@@ -163,5 +171,44 @@ nav {
   100% {
     opacity: 1;
     transform: rotateX(0deg); } }
+
+/* line 160, D:/Michal/Programovani/thetopfer_website/main.scss */
+#slider {
+  height: 800px;
+  position: absolute;
+  width: 100%;
+  overflow: hidden; }
+  /* line 167, D:/Michal/Programovani/thetopfer_website/main.scss */
+  #slider #innerSlider {
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    transition: 1s; }
+    /* line 173, D:/Michal/Programovani/thetopfer_website/main.scss */
+    #slider #innerSlider .slideritem {
+      height: 100%;
+      width: 100vw;
+      float: left; }
+      /* line 178, D:/Michal/Programovani/thetopfer_website/main.scss */
+      #slider #innerSlider .slideritem:nth-child(1) {
+        background: var(--ana1); }
+      /* line 178, D:/Michal/Programovani/thetopfer_website/main.scss */
+      #slider #innerSlider .slideritem:nth-child(2) {
+        background: var(--ana2); }
+      /* line 178, D:/Michal/Programovani/thetopfer_website/main.scss */
+      #slider #innerSlider .slideritem:nth-child(3) {
+        background: var(--ana3); }
+      /* line 178, D:/Michal/Programovani/thetopfer_website/main.scss */
+      #slider #innerSlider .slideritem:nth-child(4) {
+        background: var(--ana4); }
+      /* line 178, D:/Michal/Programovani/thetopfer_website/main.scss */
+      #slider #innerSlider .slideritem:nth-child(5) {
+        background: var(--ana5); }
+      /* line 178, D:/Michal/Programovani/thetopfer_website/main.scss */
+      #slider #innerSlider .slideritem:nth-child(6) {
+        background: var(--ana6); }
+      /* line 178, D:/Michal/Programovani/thetopfer_website/main.scss */
+      #slider #innerSlider .slideritem:nth-child(7) {
+        background: var(--ana7); }
 
 /*# sourceMappingURL=main.css.map */

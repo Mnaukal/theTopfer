@@ -4,6 +4,13 @@ html, body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+main {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+}
+
 nav {
     position: fixed;
     top: 0px;
@@ -14,6 +21,7 @@ nav {
     color: white;
     text-transform: uppercase;
     font-weight: 300;
+    z-index: 2;
 }
 
 #logo {
@@ -149,3 +157,29 @@ nav {
     }
 }
 
+#slider {
+    //height: calc(100vh - 60px);
+    height: 800px;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    
+    #innerSlider {
+        position: absolute;
+        left: 0%;
+        height: 100%;
+        transition: 1s;
+            
+        .slideritem {
+            height: 100%;
+            width: 100vw;
+            float: left;
+
+            @for $i from 1 through 7 {
+                &:nth-child(#{$i}) {  
+                    background: var(--ana + $i);        
+                }
+            }
+        }
+    }
+}
