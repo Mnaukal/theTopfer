@@ -8,7 +8,7 @@ $(document).ready(function() {
     itemCount = $("#innerSlider").children(".slideritem").length;
     var innerWidth = $(document).innerWidth();
     $("#innerSlider").css("width", innerWidth * itemCount);
-    
+    moveSlider(0);
     
     setInterval(function() {
         if(countTimer) {
@@ -17,7 +17,7 @@ $(document).ready(function() {
         }
         
         if(timer > moveTime) {
-            moveSlider(1);
+            moveSlider(current + 1);
         }
     }, 1000);    
     
@@ -34,7 +34,7 @@ $(document).ready(function() {
 });
 
 function moveSlider(direction) {
-    current += direction;
+    current = direction;
     if(current < 0)
         current = itemCount - 1;
     if(current >= itemCount)
@@ -43,4 +43,8 @@ function moveSlider(direction) {
     timer = 0;
 
     $("#innerSlider").css("left", current * -100 + "%");
+    
+    var cur = $("#cpanel").children()[current + 1];
+    var pos = $(cur).position();
+    $(".selected").css("left", pos.left).css("top", pos.top);
 }

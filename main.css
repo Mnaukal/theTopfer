@@ -243,21 +243,30 @@ nav {
           #slider #innerSlider .slideritem.randomColorOfTheDay .sliderbox #RCD {
             font-size: 2em; }
   /* line 223, D:/Michal/Programovani/thetopfer_website/main.scss */
-  #slider .arrow {
+  #slider #cpanel {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.1;
-    transition: 0.5s; }
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 8px;
+    opacity: 0.5; }
     /* line 230, D:/Michal/Programovani/thetopfer_website/main.scss */
-    #slider .arrow:hover {
-      opacity: 0.5; }
-    /* line 234, D:/Michal/Programovani/thetopfer_website/main.scss */
-    #slider .arrow.left {
-      left: 10px;
-      transform: scaleX(-1) translateY(-50%); }
-    /* line 238, D:/Michal/Programovani/thetopfer_website/main.scss */
-    #slider .arrow.right {
-      right: 10px; }
+    #slider #cpanel .circle, #slider #cpanel .selected {
+      opacity: 0.3;
+      transition: 0.5s;
+      height: 20px;
+      width: 20px;
+      border: 8px white solid;
+      border-radius: 50%;
+      margin: 6px;
+      float: left; }
+    /* line 241, D:/Michal/Programovani/thetopfer_website/main.scss */
+    #slider #cpanel .circle:hover {
+      opacity: 1; }
+    /* line 245, D:/Michal/Programovani/thetopfer_website/main.scss */
+    #slider #cpanel .selected {
+      background: white;
+      position: absolute;
+      opacity: 1;
+      transition: 1s; }
 
 /*# sourceMappingURL=main.css.map */
