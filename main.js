@@ -28,6 +28,17 @@ $(document).ready(function() {
         countTimer = true;
     });
     
+    $(window).scroll(function() {
+        var main = $("main");
+        var nav = $("nav");
+        if (main.offset().top < $(this).scrollTop())  {
+            nav.addClass('fixed');
+        }
+        else {
+            nav.removeClass('fixed');
+        }
+    });
+    
     var bodyStyles = window.getComputedStyle(document.body);
     var color = bodyStyles.getPropertyValue('--randomColorOfTheDay');
     $("#RCD").text(color);
@@ -47,4 +58,11 @@ function moveSlider(direction) {
     var cur = $("#cpanel").children()[current + 1];
     var pos = $(cur).position();
     $(".selected").css("left", pos.left).css("top", pos.top);
+}
+
+function scrollToAnchor(selector){
+    var aTag = $(selector);
+    $('html,body').animate({
+        scrollTop: aTag.offset().top - 80
+    },'slow');
 }
