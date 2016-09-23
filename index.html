@@ -58,19 +58,22 @@
         <main>
             <div id="slider">
                 <div id="innerSlider">
-                    <div class="slideritem">
-                        Random color of the day
+                    <div class="slideritem randomColorOfTheDay">
+                        <div class="sliderbox">
+                            <h2>Today's random color is</h2>
+                            <div id="RCD"></div>     
+                            <a href="http://random-color-of-the-day.funsite.cz/" target="_blank">more info</a>
+                        </div>
+                        
                     </div>
                     <div class="slideritem">
-                        M-project
-                    </div>
-                    <div class="slideritem">
-                        M-více
-                    </div>
-                    <div class="slideritem">
-                        M-projasdasdasect
+                        <div class="sliderbox">
+                            M-project
+                        </div>
                     </div>
                 </div>
+                <img class="arrow left" src="arrow.png" onclick="moveSlider(-1)">
+                <img class="arrow right" src="arrow.png" onclick="moveSlider(1)">
             </div>
             <div id="page">
                 asd

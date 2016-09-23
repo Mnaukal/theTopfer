@@ -4,6 +4,10 @@ html, body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+a {
+    color: var(--tri2);
+}
+
 main {
     width: 100%;
     position: absolute;
@@ -171,8 +175,10 @@ nav {
         transition: 1s;
             
         .slideritem {
+            position: relative;
             height: 100%;
             width: 100vw;
+            top: 0%;
             float: left;
 
             @for $i from 1 through 7 {
@@ -180,6 +186,57 @@ nav {
                     background: var(--ana + $i);        
                 }
             }
+            
+            .sliderbox {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+        
+          &.randomColorOfTheDay {
+              background: var(--randomColorOfTheDay);
+              
+              .sliderbox {
+                  background: rgba(0, 0, 0, 0.5);
+                  color: #FFF;
+                  width: 500px;
+                  height: 250px;
+                  font-weight: 700;
+                  text-align: center;
+                  font-size: 2em;
+                  
+                  h2 {
+                    font-size: 1em;
+                      margin-bottom: 0px;
+                      margin-top: 1em;
+                  }
+                  
+                  #RCD {
+                      font-size: 2em;
+                  }
+              }
+          }
+        }
+    }
+    
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.1;
+        transition: 0.5s;
+        
+        &:hover {
+            opacity: 0.5;
+        }
+        
+        &.left {
+            left: 10px;
+            transform: scaleX(-1) translateY(-50%);
+        }
+        &.right {
+            right: 10px;
         }
     }
 }

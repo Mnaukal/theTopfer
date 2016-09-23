@@ -17,14 +17,7 @@ $(document).ready(function() {
         }
         
         if(timer > moveTime) {
-            var last = current;
-            current++;
-            if(current >= itemCount)
-                current = 0;
-            
-            timer = 0;
-            
-            $("#innerSlider").css("left", current * -100 + "%");
+            moveSlider(1);
         }
     }, 1000);    
     
@@ -34,4 +27,20 @@ $(document).ready(function() {
     $("#slider").mouseleave(function() {
         countTimer = true;
     });
+    
+    var bodyStyles = window.getComputedStyle(document.body);
+    var color = bodyStyles.getPropertyValue('--randomColorOfTheDay');
+    $("#RCD").text(color);
 });
+
+function moveSlider(direction) {
+    current += direction;
+    if(current < 0)
+        current = itemCount - 1;
+    if(current >= itemCount)
+        current = 0;
+    
+    timer = 0;
+
+    $("#innerSlider").css("left", current * -100 + "%");
+}
