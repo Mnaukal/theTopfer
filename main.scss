@@ -12,7 +12,7 @@ main {
     width: 100%;
     min-height: 1000px;
     position: absolute;
-    top: calc(100vh - 60px);
+    top: calc(100vh - 80px);
     z-index: 4;
     background: var(--t8);
 }
@@ -22,16 +22,35 @@ nav {
     top: 0px;
     left: 0px;
     right: 0px;
-    height: 60px;
-    background: var(--s4);
-    color: white;
+    height: 80px;
+    background: var(--t7);
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
     z-index: 5;
 }
-
+#logo-small {
+    left: 0px;
+    position: absolute;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    height: 80px;
+    
+    .cls-1 {
+        fill: var(--s2);
+        fill-rule: evenodd;
+    }    
+}
 .fixed {
     position: fixed;
+    
+    #logo-small {
+        opacity: 0.8;
+        cursor: pointer;
+        
+        &:hover > .cls-1 {
+        fill: var(--s5);
+        }
+    }
 }
 
 #logo {
@@ -71,12 +90,13 @@ nav {
 #menu {
     position: relative;
     list-style-type: none; 
-    top: 0;
-    left: 0px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
     right: 320px;
     margin: 0px;
     padding: 0px;
-    background: var(--s4);
+    background: var(--t7);
     height: 60px;
     z-index: 10;
     float: left;
@@ -89,13 +109,14 @@ nav {
         height: 50px;
         line-height: 50px;
         //width: 180px;
+        color: var(--s2);
         min-width: 100px;
         top: 0px;
         transition: 0.5s;
         background: inherit;
         float: left;
         display: block;
-        font-size: 1.7em;
+        font-size: 3em;
         cursor: pointer;
         
         .currentPage {
@@ -104,13 +125,13 @@ nav {
     }
 
     > li:hover {
-        background: var(--s1);
+        color: var(--s5);
     }
 }
 
 #slider {
     //height: calc(100vh - 60px);
-    height: calc(100vh - 60px);
+    height: calc(100vh - 80px);
     position: fixed;
     width: 100%;
     overflow: hidden;
@@ -173,10 +194,10 @@ nav {
         left: 50%;
         transform: translateX(-50%);
         bottom: 8px;
-        opacity: 0.5;
+        opacity: 0.7;
         
         .circle, .selected {
-            opacity: 0.3;
+            opacity: 0.5;
             transition: 0.5s;
             height: 20px;
             width: 20px;
