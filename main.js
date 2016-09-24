@@ -1,4 +1,4 @@
-var moveTime = 5;
+var moveTime = 5000;
 var timer = 0;
 var countTimer = true;
 var itemCount = 0;
@@ -42,6 +42,7 @@ $(document).ready(function() {
     var bodyStyles = window.getComputedStyle(document.body);
     var color = bodyStyles.getPropertyValue('--randomColorOfTheDay');
     $("#RCD").text(color);
+    $("#project-RCD").text(color);
 });
 
 function moveSlider(direction) {
