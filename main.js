@@ -36,8 +36,11 @@ $(document).ready(function() {
         $(this).removeClass("leader");
     });
     
-    $("#me").click(function(){
-        $("#stylesheet").attr("href", "http://random-color-of-the-day.funsite.cz/stylesheet-variables.php?color=FFE000") ;
+    $("#enableRandom").change(function(){
+        if($(this).is(":checked"))
+            $("#stylesheet").attr("href", "http://random-color-of-the-day.funsite.cz/stylesheet-variables.php");
+        else
+            $("#stylesheet").attr("href", "http://random-color-of-the-day.funsite.cz/stylesheet-variables.php?color=0D1E5B");
     });
 
     

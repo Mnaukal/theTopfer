@@ -7,7 +7,7 @@
         <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
         <link rel="icon" type="image/png" href="logo-black_T.png" />
 
-        <link rel="stylesheet" type="text/css" href="http://random-color-of-the-day.funsite.cz/stylesheet-variables.php?color=802455" id="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://random-color-of-the-day.funsite.cz/stylesheet-variables.php" id="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="main.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -79,18 +79,20 @@
                     <a href="#"><img src="logo-black_T.png" class="socialimg"></a>
                 </div>
                 
-                <div id="RandomColorEveryDay-ribbon">
-                    <a href="http://random-color-of-the-day.funsite.cz/" target="_blank">
-                    </a>
-                    <div id="ribbon-text">
-                        
-                        <p><a href="http://random-color-of-the-day.funsite.cz/"><b>Random Color Every Day</b></a></p>
-                        
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <div class="slider round"></div>
-                        </label>
-                        <p id="text-1-ribbon"><b>Randomly Colored</b><br>Every Day</p>
+                <div id="ribbon-wrapper">
+                    <div id="ribbon-rotate">
+                        <div id="ribbon">
+                            <div id="right">
+                                <b>Randomly Colored</b><br>Every Day
+                            </div>
+                            <div id="left">
+                                <p><a href="http://random-color-of-the-day.funsite.cz/" target="_blank"><b>Random Color Every Day</b></a></p>
+                                <label class="switch">
+                                    <input type="checkbox" checked id="enableRandom">
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
