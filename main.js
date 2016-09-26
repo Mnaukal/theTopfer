@@ -1,33 +1,30 @@
-var moveTime = 5000;
+var moveTime = 5;
 var timer = 0;
 var countTimer = true;
 var itemCount = 0;
 var current = 0;
 
 $(document).ready(function() {
-    itemCount = $("#innerSlider").children(".slideritem").length;
-    var innerWidth = $(document).innerWidth();
-    $("#innerSlider").css("width", innerWidth * itemCount);
-    moveSlider(0);
-    
+    start();
+
     setInterval(function() {
         if(countTimer) {
             timer++;
             $("#page").text(timer);
         }
-        
+
         if(timer > moveTime) {
             moveSlider(current + 1);
         }
     }, 1000);    
-    
+
     $("#slider").mouseenter(function() {
         countTimer = false;
     });
     $("#slider").mouseleave(function() {
         countTimer = true;
     });
-    
+
     $(".member").mouseenter(function() {
         $(".member").removeClass("leader");
         $(this).addClass("leader");
@@ -35,7 +32,7 @@ $(document).ready(function() {
     $(".member").mouseleave(function() {
         $(this).removeClass("leader");
     });
-    
+
     $("#enableRandom").change(function(){
         if($(this).is(":checked"))
             $("#stylesheet").attr("href", "http://random-color-of-the-day.funsite.cz/stylesheet-variables.php");
@@ -43,7 +40,13 @@ $(document).ready(function() {
             $("#stylesheet").attr("href", "http://random-color-of-the-day.funsite.cz/stylesheet-variables.php?color=0D1E5B");
     });
 
-    
+    $(window).resize(function () {
+        waitForFinalEvent(function(){
+            start();
+        }, 500, "some unique string");
+    });
+
+
     $(window).scroll(function() {
         var main = $("main");
         var nav = $("nav");
@@ -54,12 +57,19 @@ $(document).ready(function() {
             nav.removeClass('fixed');
         }
     });
-    
+
     var bodyStyles = window.getComputedStyle(document.body);
     var color = bodyStyles.getPropertyValue('--randomColorOfTheDay');
     $("#RCD").text(color);
     $("#project-RCD").text(color);
 });
+
+function start() {
+    itemCount = $("#innerSlider").children(".slideritem").length;
+    var innerWidth = $(document).innerWidth();
+    $("#innerSlider").css("width", innerWidth * itemCount);
+    moveSlider(0);
+}
 
 function moveSlider(direction) {
     current = direction;
@@ -67,11 +77,11 @@ function moveSlider(direction) {
         current = itemCount - 1;
     if(current >= itemCount)
         current = 0;
-    
+
     timer = 0;
 
     $("#innerSlider").css("left", current * -100 + "%");
-    
+
     var cur = $("#cpanel").children()[current + 1];
     var pos = $(cur).position();
     $(".selected").css("left", pos.left).css("top", pos.top);
@@ -83,3 +93,16 @@ function scrollToAnchor(selector){
         scrollTop: aTag.offset().top - 80
     },'slow');
 }
+
+var waitForFinalEvent = (function () {
+    var timers = {};
+    return function (callback, ms, uniqueId) {
+        if (!uniqueId) {
+            uniqueId = "Don't call this twice without a uniqueId";
+        }
+        if (timers[uniqueId]) {
+            clearTimeout (timers[uniqueId]);
+        }
+        timers[uniqueId] = setTimeout(callback, ms);
+    };
+})();

@@ -6,7 +6,8 @@ html, body {
 }
 
 a {
-    color: var(--tri2);
+    color: #000;
+    color: var(--foreground-text);
 }
 
 main {
@@ -16,15 +17,10 @@ main {
     position: absolute;
     top: calc(100vh - 80px);
     z-index: 4;
+    background: #DAECF3;
     background: var(--t8);
 }
-/*#company {
-top: 0px;
-position: relative;
-font-size: 2em;
-text-align: center;
-color: var(--s4);
-} */
+
 section {
     height: 80%;
     overflow-x: hidden;
@@ -34,21 +30,24 @@ section {
         text-align: center;
         font-size: 5em;
         text-transform: uppercase;
+        color: #255063;
         color: var(--s5);
         margin: 10px;
-        
+
     }
     &#projects {
         perspective: 1000px;
         padding-bottom: 20px;
-        
+
         .project {
             float: left;
             width: 50%;
             height: 300px;
             position: relative;
             transition: 0.5s;
-            
+            color: #282828;
+            color: var(--foreground-text-gray);
+
             &:hover {
                 z-index: 5;
                 transform-origin: center;
@@ -57,7 +56,7 @@ section {
                 -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
                 box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
             }
-            
+
             .project-picture {
                 border-radius: 50%;
                 height: 250px;
@@ -73,6 +72,12 @@ section {
                 top: 0px;
                 font-size: 2.5em;
                 font-weight: 700;
+                color: #000;
+                color: var(--foreground-text);
+            }
+            a {
+                color: #000;
+                color: var(--foreground-text);
             }
             p {
                 text-align: justify;
@@ -98,16 +103,16 @@ section {
                 font-weight: 700;
                 text-transform: uppercase;
             }
-            
+
             &#project1{
+                background-color: #80BCD7;
                 background-color: var(--t3);
-                color: var(--foreground-text-gray);
-                h2, a {
-                    color: var(--foreground-text);
-                }
+                
                 .project-picture {
                     width: 250px;
+                    background-color: #4AA0C7;
                     background-color: var(--randomColorOfTheDay);
+                    color: #282828;
                     color: var(--foreground-text-gray);
                     text-align: center;
                     line-height: 250px;
@@ -115,39 +120,30 @@ section {
                     font-weight: 400;
                 }
             }
-            
+
             &#project2{
-                background-color: var(--t1);
-                color: var(--foreground-text-gray);
-                h2, a {
-                    color: var(--foreground-text);
-                }                
+                background-color: #5CA9CC;
+                background-color: var(--t1);             
             }
-            
+
             &#project3{
+                background-color: #5CA9CC;
                 background-color: var(--t1);
-                color: var(--foreground-text-gray);
-                h2, a {
-                    color: var(--foreground-text);
-                }
             }
-            
+
             &#project4{
-                background-color: var(--t3);
-                color: var(--foreground-text-gray);
-                 h2, a {
-                     color: var(--foreground-text);
-                 }
+                background-color: #80BCD7;
+                background-color: var(--t3);                
             }
         }
-        
-        
+
+
     }
-    
+
     &#games {
         perspective: 1000px;
         padding-bottom: 20px;
-        
+
         .game {
             float: left;
             width: 100%;
@@ -155,7 +151,7 @@ section {
             position: relative;
             transition: 0.5s;
             font-size: 2em;
-            
+
             h2 {
                 text-align: center;
                 margin: 10px;
@@ -169,14 +165,16 @@ section {
                 -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
                 box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
             }
-            
+
             &#m-project {
+                background-color: #A4CFE3;
                 background-color: var(--t5);
-                color: var(--tri1);
+                
+                /*color: var(--tri1);
                 h2, a {
                     color: var(--tri2);
-                }
-                
+                }*/
+
                 iframe {
                     float: left;
                 }
@@ -187,8 +185,8 @@ section {
                     right: 0px;
                     top: 0px;
                     bottom: 0px;
-                    
-                   
+
+
                 }
                 .play {
                     position: absolute;
@@ -217,11 +215,11 @@ section {
             }
         }
     }
-    
+
     &#me {
         height: 1000px;
         position: relative;
-        
+
         #team {
             position: relative;
             top: 0px;
@@ -231,12 +229,13 @@ section {
             transform: translateX(-50%);
             display: inline-block;
             perspective: 1000px;
-            
+
             h2 {
                 position: relative;
                 margin: 5px 10px;
                 font-size: 2em;
                 text-align: center;
+                color: #000;
                 color: var(--foreground-text);
             }
 
@@ -244,10 +243,12 @@ section {
                 margin: 5px 20px;
                 text-align: justify;
                 font-size: 1.2em;
+                color: #282828;
                 color: var(--foreground-text-gray);
             }
 
             .member {
+                background: #80BCD7;
                 background: var(--t3);
                 width: 300px;
                 padding: 0px 10px;
@@ -259,7 +260,7 @@ section {
                 height: 100%;
                 @extend .shadow;
                 -webkit-font-smoothing: subpixel-antialiased;
-                
+
                 .portrait {
                     position: relative;
                     border-radius: 50%;
@@ -270,16 +271,17 @@ section {
                     transition: 1s;
                 }
             }
-            
+
             .leader {
                 transition: 1s;
+                background: #5CA9CC;
                 background: var(--t1);
                 //transform: translateZ(30px);
                 //transform: scale(1.1,1.1);
                 width: 500px;
                 z-index: 3;
                 font-size: 1.3em;
-                
+
                 .portrait {
                     width: 300px;
                     height: 300px;
@@ -287,7 +289,7 @@ section {
                 }
             }
         }       
-        
+
     }
 }
 
@@ -297,6 +299,7 @@ nav {
     left: 0px;
     right: 0px;
     height: 80px;
+    background: #C8E2EE;
     background: var(--t7);
     text-transform: uppercase;
     font-weight: 400;
@@ -318,6 +321,7 @@ nav {
 
     .cls-1 {
         transition: 0.5s;
+        fill: #3B809F;
         fill: var(--s2);
         fill-rule: evenodd;
     }    
@@ -331,10 +335,11 @@ nav {
         cursor: pointer;
 
         &:hover > .cls-1 {
+            fill: #255063;
             fill: var(--s5);
         }
     }
-    
+
     #ribbon-wrapper {
         opacity: 1;
         width: 250px;
@@ -369,6 +374,7 @@ nav {
     right: 320px;
     margin: 0px;
     padding: 0px;
+    background: #C8E2EE;
     background: var(--t7);
     height: 80px;
     z-index: 10;
@@ -383,6 +389,7 @@ nav {
         height: 70px;
         line-height: 70px;
         //width: 180px;
+        color: #3B809F;
         color: var(--s2);
         width: 250px;
         top: 0px;
@@ -399,6 +406,7 @@ nav {
     }
 
     > li:hover {
+        color: #16303B;
         color: var(--s7);
     }
 }
@@ -424,7 +432,8 @@ nav {
             flex: 1;
 
             @for $i from 1 through 7 {
-                &:nth-child(#{$i}) {  
+                &:nth-child(#{$i}) { 
+                    background: #4AA0C7;
                     background: var(--ana + $i);        
                 }
             }
@@ -439,6 +448,8 @@ nav {
             &.about{
                 background-image: url(img/slider/code.jpg);
                 background-size: 100%;
+                background-repeat: no-repeat;
+
                 .sliderbox {
                     color: #FFF;
                     color: rgba(255, 255, 255, 0.7);
@@ -447,16 +458,17 @@ nav {
                     font-weight: 300;
                     line-height: 80px;
                     left: 2%;
-                    transform: translateX(0);
-                    
+                    transform: none;
+
                     b {
                         color: #FFF;
                         color: rgba(255, 255, 255, 1);
                     }
                 }
             }
-            
+
             &.randomColorOfTheDay {
+                background: #4AA0C7;
                 background: var(--randomColorOfTheDay);
 
                 .sliderbox {
@@ -478,9 +490,13 @@ nav {
                     #RCD {
                         font-size: 2em;
                     }
+                    
+                    a {
+                        color: inherit;
+                    }
                 }
             }
-            
+
             &.m-project {
                 background-image: url(img/slider/m-project-blur.png);
                 background-size: 100%;
@@ -488,13 +504,13 @@ nav {
                 .sliderbox {
                     background: rgba(0, 0, 0, 0.5);
                     color: #FFF;
-                    width: 1400px;
+                    width: 1200px;
                     height: 400px;
                     font-weight: 300;
                     text-align: center;
                     font-size: 2em;
                     margin-top: 5%;
-                    
+
                     iframe {
                         float: left;
                     }
@@ -508,24 +524,25 @@ nav {
                     }
                     .play {
                         position: absolute;
-                        width: 300px;
-                        height: 120px;
+                        width: 250px;
+                        height: 100px;
                         padding: 0px;
                         bottom: 0px;
-                        left: 50px;
-                        
+                        left: 0px;
+
                         img {
-                            width: 300px;
+                            width: 250px;
                         }
                     }
                     .moreinfo {
+                        color: #FFF;
                         position: absolute;
-                        width: 300px;
-                        height: 120px;
+                        width: 250px;
+                        height: 100px;
                         padding: 0px;
                         bottom: 0px;
-                        left: 350px;
-                        line-height: 120px;
+                        left: 250px;
+                        line-height: 100px;
                         text-transform: uppercase;
                         font-weight: 700;
                     }
@@ -593,7 +610,7 @@ nav {
     height: 0px;
     overflow: hidden;
     transition: 0.5s;
-    
+
     #ribbon-rotate {
         position: absolute;
         width: 600px;
@@ -603,11 +620,13 @@ nav {
         transform: rotate(-45deg);
         transform-origin: right;
     }
-    
+
     #ribbon {
         @extend .shadow;
         pointer-events: all;
+        background: #000;
         background: var(--foreground-text);
+        color: #4AA0C7;
         color: var(--randomColorOfTheDay);
         position: absolute;
         top: 0px;
@@ -619,15 +638,16 @@ nav {
         transition: 0.5s;
         font-size: 1.3em;
         font-weight: 300;
-        
-        
+
+
         #left {
             position: absolute;
             left: 0px;
             right: 300px;
             height: 100%;
-            
+
             a {
+                color: #4AA0C7;
                 color: var(--randomColorOfTheDay);
                 position: absolute;
                 bottom: 40px;
@@ -645,11 +665,11 @@ nav {
             top: 0px;
             text-align: center;
         }
-        
+
         &:hover {
             left: 300px;
         }
-    
+
         //slider switch
         .switch {
             position: relative;
@@ -685,10 +705,12 @@ nav {
         }
 
         input:checked + .slider {
+            background-color: #4AA0C7;
             background-color: var(--randomColorOfTheDay);
         }
 
         input:focus + .slider {
+            box-shadow: 0 0 1px #4AA0C7;
             box-shadow: 0 0 1px var(--randomColorOfTheDay);
         }
 
@@ -703,7 +725,64 @@ nav {
         }
 
         .slider.round:before {
-        border-radius: 50%;
+            border-radius: 50%;
+        }
     }
+}
+
+@media screen and (max-width: 1600px) {
+    section#projects {
+        .project {
+            h2 {
+                font-size: 1.9em;
+            }
+            p {
+                top: 52px;
+                font-size: 1.2em;
+            }
+            .download {
+                font-size: 1.4em;
+            }
+            .source {
+                left: 450px;
+                font-size: 1.4em;
+            }
+        }
     }
+    section#me {
+        #team {
+            .member {
+                width: 250px;
+                padding: 0px 10px;
+
+                .portrait {
+                    height: 150px;
+                    width: 150px;
+                    left: 50px;
+                }
+            }
+
+            .leader {
+                width: 400px;
+
+                .portrait {
+                    width: 200px;
+                    height: 200px;
+                    left: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    section#projects {
+        perspective: 1000px;
+        padding-bottom: 20px;
+
+        .project {
+            width: 100%;
+        }
+    }
+    
 }
