@@ -2,6 +2,7 @@ html, body {
     padding: 0px;
     margin: 0px;
     font-family: 'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -28,12 +29,6 @@ section {
     height: 80%;
     overflow-x: hidden;
 
-    #portrait1 {
-        position: relative;
-        border-radius: 50%;
-        height: 300px;
-        left: 20%;
-    }
     h1 {
         position: relative;
         text-align: center;
@@ -105,10 +100,10 @@ section {
             }
             
             &#project1{
-                background-color: var(--t5);
-                color: var(--tri1);
+                background-color: var(--t3);
+                color: var(--foreground-text-gray);
                 h2, a {
-                    color: var(--tri2);
+                    color: var(--foreground-text);
                 }
                 .project-picture {
                     width: 250px;
@@ -122,26 +117,26 @@ section {
             }
             
             &#project2{
-                background-color: var(--t3);
-                color: var(--tri5);
+                background-color: var(--t1);
+                color: var(--foreground-text-gray);
                 h2, a {
-                    color: var(--tri6);
+                    color: var(--foreground-text);
                 }                
             }
             
             &#project3{
-                background-color: var(--t3);
-                color: var(--tri5);
+                background-color: var(--t1);
+                color: var(--foreground-text-gray);
                 h2, a {
-                    color: var(--tri6);
+                    color: var(--foreground-text);
                 }
             }
             
             &#project4{
-	               background-color: var(--t5);
-                 color: var(--tri1);
+                background-color: var(--t3);
+                color: var(--foreground-text-gray);
                  h2, a {
-                    color: var(--tri2);
+                     color: var(--foreground-text);
                  }
             }
         }
@@ -222,6 +217,78 @@ section {
             }
         }
     }
+    
+    &#me {
+        height: 1000px;
+        position: relative;
+        
+        #team {
+            position: relative;
+            top: 0px;
+            height: 600px;
+            z-index: 2;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            perspective: 1000px;
+            
+            h2 {
+                position: relative;
+                margin: 5px 10px;
+                font-size: 2em;
+                text-align: center;
+                color: var(--foreground-text);
+            }
+
+            p {
+                margin: 5px 20px;
+                text-align: justify;
+                font-size: 1.2em;
+                color: var(--foreground-text-gray);
+            }
+
+            .member {
+                background: var(--t3);
+                width: 300px;
+                padding: 0px 10px;
+                margin: 0px 10px;
+                position: relative;
+                float: left;
+                transition: 1s;
+                transform-origin: center;
+                height: 100%;
+                @extend .shadow;
+                -webkit-font-smoothing: subpixel-antialiased;
+                
+                .portrait {
+                    position: relative;
+                    border-radius: 50%;
+                    height: 200px;
+                    width: 200px;
+                    left: 50px;
+                    margin-top: 25px;
+                    transition: 1s;
+                }
+            }
+            
+            .leader {
+                transition: 1s;
+                background: var(--t1);
+                //transform: translateZ(30px);
+                //transform: scale(1.1,1.1);
+                width: 500px;
+                z-index: 3;
+                font-size: 1.3em;
+                
+                .portrait {
+                    width: 300px;
+                    height: 300px;
+                    left: 100px;
+                }
+            }
+        }       
+        
+    }
 }
 
 nav {
@@ -255,6 +322,7 @@ nav {
         fill-rule: evenodd;
     }    
 }
+
 .fixed {
     position: fixed;
 
@@ -265,6 +333,12 @@ nav {
         &:hover > .cls-1 {
             fill: var(--s5);
         }
+    }
+    
+    #RandomColorEveryDay-ribbon {
+        opacity: 1;
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -509,3 +583,101 @@ nav {
     height: 100%;
 }
 
+#RandomColorEveryDay-ribbon {
+    opacity: 0;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 300px;
+    height: 70px;
+   // overflow: hidden;
+    transition: 0.5s;
+    
+    #ribbon-text {
+        background: var(--foreground-text);
+        position: absolute;
+        top: 180px;
+        height: 70px;
+        width: 500px;
+        transform-origin: center;
+        padding: 0px;
+        margin: 0px;
+        right: -100px;
+        transform: rotate(-45deg);
+        font-size: 1.2em;
+        a {
+            color: var(--randomColorOfTheDay);
+            position: absolute;
+            left: 38px;
+            bottom: 42px;
+            font-size: 0.8em;
+        }
+        #text-1-ribbon {
+            position: absolute;
+            left: 280px;
+            bottom: -5px;
+            text-align: center;
+}
+    }
+    
+    &:hover {
+        height: 360px;
+        right: -170px;
+    }
+    
+    //slider switch
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 34px;
+        height: 20px;
+        bottom: -20px;
+        left: 120px;
+    }
+    .switch input {display:none;}
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked + .slider {
+        background-color: var(--randomColorOfTheDay);
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px var(--randomColorOfTheDay);
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(14px);
+        -ms-transform: translateX(14px);
+        transform: translateX(14px);
+    }
+
+    .slider.round {
+        border-radius: 18px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+}

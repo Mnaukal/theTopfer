@@ -28,6 +28,19 @@ $(document).ready(function() {
         countTimer = true;
     });
     
+    $(".member").mouseenter(function() {
+        $(".member").removeClass("leader");
+        $(this).addClass("leader");
+    });
+    $(".member").mouseleave(function() {
+        $(this).removeClass("leader");
+    });
+    
+    $("#me").click(function(){
+        $("#stylesheet").attr("href", "http://random-color-of-the-day.funsite.cz/stylesheet-variables.php?color=FFE000") ;
+    });
+
+    
     $(window).scroll(function() {
         var main = $("main");
         var nav = $("nav");
