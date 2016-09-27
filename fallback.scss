@@ -1,0 +1,227 @@
+a {
+    color: #151515;
+    //color: var(--foreground-text);
+}
+
+main {
+    background: #DDDDDD;
+    //background: var(--t8);
+}
+
+section {
+    h1 {
+        color: #FFFFFF;
+        //color: var(--s5);
+    }
+    &#projects {
+        .project {
+            color: #282828;
+            //color: var(--foreground-text-gray);
+
+            h2 {
+                color: #151515;
+                //color: var(--foreground-text);
+            }
+            a {
+                color: #151515;
+                //color: var(--foreground-text);
+            }
+
+            &#project1{
+                background-color: #80BCD7;
+                //background-color: var(--t3);
+
+                .project-picture {
+                    background-color: #4AA0C7;
+                    //background-color: var(--randomColorOfTheDay);
+                    color: #282828;
+                    //color: var(--foreground-text-gray);
+                }
+            }
+
+            &#project2{
+                background-color: #5CA9CC;
+                //background-color: var(--t1);             
+            }
+
+            &#project3{
+                background-color: #5CA9CC;
+                //background-color: var(--t1);
+            }
+
+            &#project4{
+                background-color: #80BCD7;
+                //background-color: var(--t3);                
+            }
+        }
+
+
+    }
+
+    &#games {
+        .game {
+            &#m-project {
+                background-color: #A4CFE3;
+                //background-color: var(--t5);
+            }
+        }
+    }
+
+    &#me {
+        #team {
+            h2 {
+                color: #151515;
+                //color: var(--foreground-text);
+            }
+
+            p {
+                color: #282828;
+                //color: var(--foreground-text-gray);
+            }
+
+            .member {
+                background: #80BCD7;
+                //background: var(--t3);
+            }
+
+            .leader {
+                background: #5CA9CC;
+                //background: var(--t1);
+            }
+        }       
+    }
+}
+
+nav {
+    background: #151515;
+    //background: var(--t7);
+}
+
+#logo-small {
+    .cls-1 {
+        fill: #EEEEEE;
+        //fill: var(--s2);
+    }    
+}
+
+.fixed {
+    #logo-small {
+        &:hover > .cls-1 {
+            fill: #FFFFFF;
+            //fill: var(--s5);
+        }
+    }
+}
+
+#social {
+    .socialimg {
+
+    }
+}
+
+
+#menu {
+    background: #151515;
+    //background: var(--t7);
+
+    > li {
+        color: #EEEEEE;
+        //color: var(--s2);
+        .currentPage {
+
+        }
+    }
+
+    > li:hover {
+        color: #16303B;
+        //color: var(--s7);
+    }
+}
+
+#slider {
+    #innerSlider {
+        .slideritem {
+            background: #4AA0C7;      
+        }
+    }
+
+    &.about{
+        .sliderbox {
+            color: #FFF;
+            color: rgba(255, 255, 255, 0.7);
+            b {
+                color: #FFF;
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+    }
+
+    &.randomColorOfTheDay {
+        background: #4AA0C7;
+        //background: var(--randomColorOfTheDay);
+
+        .sliderbox {
+            background: rgba(0, 0, 0, 0.5);
+            color: #FFF;
+        }
+    }
+
+    &.m-project {
+        .sliderbox {
+            background: rgba(0, 0, 0, 0.5);
+            color: #FFF;
+            .moreinfo {
+                color: #FFF;
+            }
+        }
+    }
+}
+
+#ribbon-wrapper {
+    #ribbon {
+        background: #151515;
+        //background: var(--foreground-text);
+        color: #4AA0C7;
+        //color: var(--randomColorOfTheDay);
+        
+        #left {
+            a {
+                color: #4AA0C7;
+                //color: var(--randomColorOfTheDay);
+            }
+        }
+        .slider {
+            background-color: #ccc;
+        }
+        .slider:before {
+            background-color: white;
+        }
+
+        input:checked + .slider {
+            background-color: #4AA0C7;
+            //background-color: var(--randomColorOfTheDay);
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #4AA0C7;
+            //box-shadow: 0 0 1px var(--randomColorOfTheDay);
+        }
+    }
+}
+
+@media screen and (max-width: 1366px) {
+
+    section#projects {
+        .project {
+            &#project1, &#project3{
+                background-color: #80BCD7;
+                //background-color: var(--t3);
+            }
+
+            &#project2, &#project4{
+                background-color: #5CA9CC;
+                //background-color: var(--t1);             
+            }
+        }
+    }
+}

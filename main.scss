@@ -3,6 +3,7 @@ html, body {
     margin: 0px;
     font-family: 'Source Sans Pro', sans-serif;
     -webkit-font-smoothing: antialiased;
+    transition: 0.5s;
 }
 
 a {
@@ -107,7 +108,7 @@ section {
             &#project1{
                 background-color: #80BCD7;
                 background-color: var(--t3);
-                
+
                 .project-picture {
                     width: 250px;
                     background-color: #4AA0C7;
@@ -169,11 +170,11 @@ section {
             &#m-project {
                 background-color: #A4CFE3;
                 background-color: var(--t5);
-                
+
                 /*color: var(--tri1);
                 h2, a {
-                    color: var(--tri2);
-                }*/
+                color: var(--tri2);
+            }*/
 
                 iframe {
                     float: left;
@@ -217,7 +218,7 @@ section {
     }
 
     &#me {
-        height: 1000px;
+        min-height: 1000px;
         position: relative;
 
         #team {
@@ -331,7 +332,7 @@ nav {
     position: fixed;
 
     #logo-small {
-        opacity: 0.8;
+        opacity: 1;
         cursor: pointer;
 
         &:hover > .cls-1 {
@@ -447,7 +448,7 @@ nav {
 
             &.about{
                 background-image: url(img/slider/code.jpg);
-                background-size: 100%;
+                background-size: cover;
                 background-repeat: no-repeat;
 
                 .sliderbox {
@@ -490,7 +491,7 @@ nav {
                     #RCD {
                         font-size: 2em;
                     }
-                    
+
                     a {
                         color: inherit;
                     }
@@ -499,7 +500,8 @@ nav {
 
             &.m-project {
                 background-image: url(img/slider/m-project-blur.png);
-                background-size: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
 
                 .sliderbox {
                     background: rgba(0, 0, 0, 0.5);
@@ -776,13 +778,151 @@ nav {
 }
 
 @media screen and (max-width: 1366px) {
+    #logo {
+        left: 20vw;
+        width: 60vw;
+        top: 0px;
+        transform: none;
+        height: auto;
+
+        .logoimg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
     section#projects {
         perspective: 1000px;
         padding-bottom: 20px;
 
         .project {
             width: 100%;
+
+            &#project1, &#project3{
+                background-color: #80BCD7;
+                background-color: var(--t3);
+            }
+
+            &#project2, &#project4{
+                background-color: #5CA9CC;
+                background-color: var(--t1);             
+            }
         }
     }
-    
+
+    section#me {
+        height: 1300px;
+
+        #team {
+            .member {
+                width: 80%;
+                height: 250px;
+                padding: 0px 10px;
+                margin: 8px 10%;
+
+                .portrait {
+                    float: left;
+                    height: 150px;
+                    width: 150px;
+                    left: 0px;
+                    margin: 50px 5px;
+                    margin-left: 25px;
+                }
+
+                h2 {
+                    float: left;
+                    width: 50%;
+                }
+                p {
+                    float: left;
+                }
+            }
+
+            .leader {
+                height: 250px;
+                font-size: 1em;
+
+                .portrait {
+                    width: 150px;
+                    height: 150px;
+                }
+
+
+            }
+        }
+    }
+
+    #menu {
+        transform: translateX(-50%);
+        left: 50%;
+        margin: 0px;
+        padding: 0px;
+        height: 80px;
+
+        > li {
+            padding: 5px;
+            width: 150px;
+            float: left;
+            //clear: left;
+            font-size: 1.5em;
+        }
+    }
+
+    #slider {
+        #innerSlider {
+            .slideritem {
+                &.about{
+                    .sliderbox {
+                        width: 98%;
+                        font-size: 7vw;
+                        line-height: normal;
+                    }
+                }
+
+                &.randomColorOfTheDay {
+                    .sliderbox {
+                        max-width: 100%;
+                        font-size: 2em;
+                    }   
+                }
+
+                &.m-project {
+                    .sliderbox {
+                        width: 80%;
+                        height: 60%;
+                        font-size: 2em;
+                        margin-top: 5%;
+
+                        iframe, div {
+                            float: left;
+                            position: relative;
+                            width: 100%;
+                            height: 50%;
+                            left: 0px;
+                        }
+                        .play {
+                            position: absolute;
+                            width: 50%;
+                            height: 30%;
+
+                            img {
+                                height: 100%;
+                                width: auto;
+                                max-width: 100%;
+                            }
+                        }
+                        .moreinfo {
+                            position: absolute;
+                            width: 50%;
+                            height: 25%;
+                            left: 50%;
+                            line-height: normal;
+                            font-size: 0.8em;
+                            padding-top: 5%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

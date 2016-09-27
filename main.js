@@ -37,7 +37,7 @@ $(document).ready(function() {
         if($(this).is(":checked"))
             $("#stylesheet").attr("href", "http://random-color-of-the-day.funsite.cz/stylesheet-variables.php");
         else
-            $("#stylesheet").attr("href", "http://random-color-of-the-day.funsite.cz/stylesheet-variables.php?color=0D1E5B");
+            $("#stylesheet").attr("href", "fallback.css");
     });
 
     $(window).resize(function () {
@@ -58,10 +58,7 @@ $(document).ready(function() {
         }
     });
 
-    var bodyStyles = window.getComputedStyle(document.body);
-    var color = bodyStyles.getPropertyValue('--randomColorOfTheDay');
-    $("#RCD").text(color);
-    $("#project-RCD").text(color);
+   
 });
 
 function start() {
@@ -69,6 +66,19 @@ function start() {
     var innerWidth = $(document).innerWidth();
     $("#innerSlider").css("width", innerWidth * itemCount);
     moveSlider(0);
+    
+     var bodyStyles = window.getComputedStyle(document.body);
+    var color = bodyStyles.getPropertyValue('--randomColorOfTheDay');
+    if(color == "") {
+        $("#stylesheet").attr("href", "fallback.css");
+        color = "#BROKEN"
+        $("#RCD").text(color);
+        $("#project-RCD").text(color);
+    }
+    else {
+        $("#RCD").text(color);
+        $("#project-RCD").text(color);
+    }
 }
 
 function moveSlider(direction) {
