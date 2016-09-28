@@ -50,14 +50,18 @@ $(document).ready(function() {
     $(window).scroll(function() {
         var main = $("main");
         var nav = $("nav");
-        if (main.offset().top < $(this).scrollTop())  {
+        if (main.offset().top <= $(this).scrollTop())  {
             nav.addClass('fixed');
         }
         else {
             nav.removeClass('fixed');
         }
     });
-
+    
+    $("form").submit(function(){
+        //$("input[type=submit]").slideToggle(1000);
+        $("input[type=submit]").css("top", "60px");
+    });
    
 });
 
@@ -68,7 +72,7 @@ function start() {
     moveSlider(0);
     
      var bodyStyles = window.getComputedStyle(document.body);
-    var color = bodyStyles.getPropertyValue('--randomColorOfTheDay');
+    var color = bodyStyles.getPropertyValue('--randomColorEveryDay');
     if(color == "") {
         $("#stylesheet").attr("href", "fallback.css");
         color = "#BROKEN"

@@ -92,10 +92,10 @@ nav {
     color: white; }
 
 /* line 159, D:/Michal/Programovani/theTopfer/fallback.scss */
-#slider.randomColorOfTheDay {
+#slider.randomColorEveryDay {
   background: #4AA0C7; }
   /* line 163, D:/Michal/Programovani/theTopfer/fallback.scss */
-  #slider.randomColorOfTheDay .sliderbox {
+  #slider.randomColorEveryDay .sliderbox {
     background: rgba(0, 0, 0, 0.5);
     color: #FFF; }
 

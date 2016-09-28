@@ -20,6 +20,7 @@ main {
     z-index: 4;
     background: #DAECF3;
     background: var(--t8);
+    transition: 0.5s;
 }
 
 section {
@@ -34,7 +35,7 @@ section {
         color: #255063;
         color: var(--s5);
         margin: 10px;
-
+        transition: 0.5s;
     }
     &#projects {
         perspective: 1000px;
@@ -112,7 +113,7 @@ section {
                 .project-picture {
                     width: 250px;
                     background-color: #4AA0C7;
-                    background-color: var(--randomColorOfTheDay);
+                    background-color: var(--randomColorEveryDay);
                     color: #282828;
                     color: var(--foreground-text-gray);
                     text-align: center;
@@ -218,7 +219,7 @@ section {
     }
 
     &#me {
-        min-height: 1000px;
+        min-height: 740px;
         position: relative;
 
         #team {
@@ -292,6 +293,105 @@ section {
         }       
 
     }
+
+    &#contact {
+        position: relative;
+        height: 1000px;
+
+
+        form {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #282828;
+
+
+            label {
+                font-size: 1.5em;
+            }
+            input, textarea {
+                width: 100%;
+                padding: 10px 20px;
+                margin: 4px 0;
+                box-sizing: border-box;
+                border: 2px solid var(--s6);
+                border-radius: 4px;
+                font-size: 1em;
+                background: #FFF;
+            }
+            textarea {
+                resize: none;
+                overflow: auto;
+            }
+
+            /*input:not([type=submit]), textarea {
+                &:invalid {
+                    background: #FFF;
+                }
+                &:valid {
+                    background: #dcffdc;
+                    //background: var(--t9);
+                }
+            }*/
+
+            input, textarea {
+                &:focus {
+                    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+                    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+                    outline: none;
+                }
+            }
+
+            input[type=submit] {
+                position: relative;
+                top: 0px;
+                background: var(--s6);
+                color: white;
+                border: none;
+                font-size: 2em;
+                font-weight: 700;
+                -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+                -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+                box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+                z-index: 2;
+                transition: 0.5s ease-in-out;
+            }
+            .g-recaptcha {
+                position: relative;
+                left: 50%;
+                width: 300px;
+                transform: translateX(-50%);
+                margin: 8px 0px;
+            }
+        }
+        #contactFrame {
+            width: 447.156px;
+            height: 57px;
+            height: 50px;
+            top: 679px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            //background: var(--s6);
+            color: white;
+            border: none;
+            font-size: 2em;
+            font-weight: 700;
+            /*-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+            -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);*/
+            z-index: 0;
+        }
+    }
+}
+
+#contactResult {
+    color: #FFF;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 4px;
 }
 
 nav {
@@ -305,6 +405,7 @@ nav {
     text-transform: uppercase;
     font-weight: 400;
     z-index: 5;
+    transition: 0.5s;
 }
 
 .shadow {
@@ -348,8 +449,6 @@ nav {
     }
 }
 
-
-
 #social {
     position: absolute;
     top: 0px;
@@ -364,7 +463,6 @@ nav {
         margin: 5px;
     }
 }
-
 
 #menu {
     position: relative;
@@ -386,13 +484,13 @@ nav {
         position: relative;
         text-align: center;
         margin: 0px;
-        padding: 5px 1em;
+        padding: 5px 1.2em;
         height: 70px;
         line-height: 70px;
         //width: 180px;
+        //width: 250px;
         color: #3B809F;
         color: var(--s2);
-        width: 250px;
         top: 0px;
         transition: 0.5s;
         background: inherit;
@@ -468,9 +566,9 @@ nav {
                 }
             }
 
-            &.randomColorOfTheDay {
+            &.randomColorEveryDay {
                 background: #4AA0C7;
-                background: var(--randomColorOfTheDay);
+                background: var(--randomColorEveryDay);
 
                 .sliderbox {
                     background: rgba(0, 0, 0, 0.5);
@@ -629,7 +727,7 @@ nav {
         background: #000;
         background: var(--foreground-text);
         color: #4AA0C7;
-        color: var(--randomColorOfTheDay);
+        color: var(--randomColorEveryDay);
         position: absolute;
         top: 0px;
         height: 70px;
@@ -650,7 +748,7 @@ nav {
 
             a {
                 color: #4AA0C7;
-                color: var(--randomColorOfTheDay);
+                color: var(--randomColorEveryDay);
                 position: absolute;
                 bottom: 40px;
                 text-align: center;
@@ -708,12 +806,12 @@ nav {
 
         input:checked + .slider {
             background-color: #4AA0C7;
-            background-color: var(--randomColorOfTheDay);
+            background-color: var(--randomColorEveryDay);
         }
 
         input:focus + .slider {
             box-shadow: 0 0 1px #4AA0C7;
-            box-shadow: 0 0 1px var(--randomColorOfTheDay);
+            box-shadow: 0 0 1px var(--randomColorEveryDay);
         }
 
         input:checked + .slider:before {
@@ -777,7 +875,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1300px) {
     #logo {
         left: 20vw;
         width: 60vw;
@@ -791,8 +889,46 @@ nav {
         }
     }
 
+    section#games {
+        .game {
+            width: 100%;
+            height: 1000px;
+
+            &#m-project {
+                iframe, .info {
+                    float: left;
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    left: 0px;
+
+                    .play {
+                        position: absolute;
+                        width: 50%;
+                        height: 30%;
+                        left: 0px;
+
+                        img {
+                            height: 100%;
+                            width: auto;
+                            max-width: 100%;
+                        }
+                    }
+                    .moreinfo {
+                        position: absolute;
+                        width: 50%;
+                        height: 25%;
+                        left: 50%;
+                        line-height: normal;
+                        font-size: 0.8em;
+                        padding-top: 5%;
+                    }
+                }
+            }
+        }
+    }
+
     section#projects {
-        perspective: 1000px;
         padding-bottom: 20px;
 
         .project {
@@ -879,7 +1015,7 @@ nav {
                     }
                 }
 
-                &.randomColorOfTheDay {
+                &.randomColorEveryDay {
                     .sliderbox {
                         max-width: 100%;
                         font-size: 2em;

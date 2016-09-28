@@ -33,7 +33,7 @@ section {
 
                 .project-picture {
                     background-color: #4AA0C7;
-                    //background-color: var(--randomColorOfTheDay);
+                    //background-color: var(--randomColorEveryDay);
                     color: #282828;
                     //color: var(--foreground-text-gray);
                 }
@@ -156,9 +156,9 @@ nav {
         }
     }
 
-    &.randomColorOfTheDay {
+    &.randomColorEveryDay {
         background: #4AA0C7;
-        //background: var(--randomColorOfTheDay);
+        //background: var(--randomColorEveryDay);
 
         .sliderbox {
             background: rgba(0, 0, 0, 0.5);
@@ -182,12 +182,12 @@ nav {
         background: #151515;
         //background: var(--foreground-text);
         color: #4AA0C7;
-        //color: var(--randomColorOfTheDay);
+        //color: var(--randomColorEveryDay);
         
         #left {
             a {
                 color: #4AA0C7;
-                //color: var(--randomColorOfTheDay);
+                //color: var(--randomColorEveryDay);
             }
         }
         .slider {
@@ -199,12 +199,12 @@ nav {
 
         input:checked + .slider {
             background-color: #4AA0C7;
-            //background-color: var(--randomColorOfTheDay);
+            //background-color: var(--randomColorEveryDay);
         }
 
         input:focus + .slider {
             box-shadow: 0 0 1px #4AA0C7;
-            //box-shadow: 0 0 1px var(--randomColorOfTheDay);
+            //box-shadow: 0 0 1px var(--randomColorEveryDay);
         }
     }
 }
