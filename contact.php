@@ -56,7 +56,7 @@
                             $resultColor = "green";
                         }
                         else {
-                            $result = "Error sending message! Please check your input and try again";
+                            $result = "Error sending message! Please try again";
                             $resultColor = "red";
                         }
                     }

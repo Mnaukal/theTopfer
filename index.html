@@ -11,12 +11,19 @@
 
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="http://random-color-of-the-day.funsite.cz/stylesheet-variables.php" id="stylesheet">
+        <link rel="stylesheet" href="http://random-color-of-the-day.funsite.cz/stylesheet-variables.php" id="stylesheet" 
+onload="if (typeof start == 'function') {start(true);}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script type="text/javascript" src="main.js"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
+        <!--
+        <div id="debugbox" style="position: fixed; top: 0px; left: 0px; background: #FFF; z-index: 1000">
+            DEBUG
+        </div>
+        -->
+        
         <div id="logo">
             <a onclick="scrollToAnchor('#me')"><img src="img/logo-white.png" class="logoimg"></a>
         </div>
@@ -186,8 +193,9 @@
             </section>
             
             <footer>
-                asdasdsdaFooter
-                <endora></endora>
+                <p class="copyright">© Michal &amp; Ladislav Töpfer</p>
+                <p>theTopfer - Michal Töpfer, Czech Republic</p>
+                <p class="endora"><endora></endora></p>
             </footer>           
         </main>
     </body>

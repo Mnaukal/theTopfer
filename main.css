@@ -4,15 +4,13 @@ html, body {
   margin: 0px;
   font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
-  -webkit-transition: 0.5s;
   transition: 0.5s; }
 
 /* line 9, D:/Michal/Programovani/theTopfer/main.scss */
 a {
-  color: #000;
   color: var(--foreground-text); }
 
-/* line 14, D:/Michal/Programovani/theTopfer/main.scss */
+/* line 13, D:/Michal/Programovani/theTopfer/main.scss */
 main {
   padding-top: 80px;
   width: 100%;
@@ -20,50 +18,42 @@ main {
   position: absolute;
   top: calc(100vh - 80px);
   z-index: 4;
-  background: #DAECF3;
   background: var(--t8);
-  -webkit-transition: 0.5s;
   transition: 0.5s; }
 
-/* line 26, D:/Michal/Programovani/theTopfer/main.scss */
+/* line 24, D:/Michal/Programovani/theTopfer/main.scss */
 section {
   height: 80%;
   overflow-x: hidden; }
-  /* line 30, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 28, D:/Michal/Programovani/theTopfer/main.scss */
   section h1 {
     position: relative;
     text-align: center;
     font-size: 5em;
     text-transform: uppercase;
-    color: #255063;
     color: var(--s5);
     margin: 10px;
-    -webkit-transition: 0.5s;
     transition: 0.5s; }
-  /* line 40, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 37, D:/Michal/Programovani/theTopfer/main.scss */
   section#projects {
-    -webkit-perspective: 1000px;
     perspective: 1000px;
     padding-bottom: 20px; }
-    /* line 44, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 41, D:/Michal/Programovani/theTopfer/main.scss */
     section#projects .project {
       float: left;
       width: 50%;
       height: 300px;
       position: relative;
-      -webkit-transition: 0.5s;
       transition: 0.5s;
-      color: #282828;
       color: var(--foreground-text-gray); }
-      /* line 53, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 49, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project:hover {
         z-index: 5;
-        -webkit-transform-origin: center;
-        transform-origin: center;
-        -webkit-transform: translateZ(10px);
-        transform: translateZ(10px);
+        transform: scale(1.02);
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
         box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75); }
-      /* line 62, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 57, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project .project-picture {
         border-radius: 50%;
         height: 250px;
@@ -71,7 +61,7 @@ section {
         position: relative;
         left: 25px;
         top: 25px; }
-      /* line 70, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 65, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project h2 {
         margin-left: 300px;
         margin-right: 25px;
@@ -79,13 +69,11 @@ section {
         top: 0px;
         font-size: 2.5em;
         font-weight: 700;
-        color: #000;
         color: var(--foreground-text); }
-      /* line 80, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 75, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project a {
-        color: #000;
         color: var(--foreground-text); }
-      /* line 84, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 79, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project p {
         text-align: justify;
         margin-left: 300px;
@@ -93,7 +81,7 @@ section {
         position: absolute;
         top: 70px;
         font-size: 1.48em; }
-      /* line 92, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 87, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project .download {
         position: absolute;
         bottom: 25px;
@@ -101,7 +89,7 @@ section {
         font-size: 1.5em;
         font-weight: 700;
         text-transform: uppercase; }
-      /* line 100, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 95, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project .source {
         position: absolute;
         bottom: 25px;
@@ -109,69 +97,72 @@ section {
         font-size: 1.5em;
         font-weight: 700;
         text-transform: uppercase; }
-      /* line 109, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 104, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project#project1 {
-        background-color: #80BCD7;
-        background-color: var(--t3); }
-        /* line 113, D:/Michal/Programovani/theTopfer/main.scss */
+        background-color: var(--t3);
+        transform-origin: 80% 80% 0; }
+        /* line 108, D:/Michal/Programovani/theTopfer/main.scss */
         section#projects .project#project1 .project-picture {
           width: 250px;
-          background-color: #4AA0C7;
           background-color: var(--randomColorEveryDay);
-          color: #282828;
           color: var(--foreground-text-gray);
           text-align: center;
           line-height: 250px;
           font-size: 3em;
           font-weight: 400; }
-      /* line 126, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 120, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project#project2 {
-        background-color: #5CA9CC;
-        background-color: var(--t1); }
-      /* line 131, D:/Michal/Programovani/theTopfer/main.scss */
+        background-color: var(--t1);
+        transform-origin: 20% 80% 0; }
+        /* line 124, D:/Michal/Programovani/theTopfer/main.scss */
+        section#projects .project#project2 p {
+          margin-right: 35px; }
+      /* line 129, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project#project3 {
-        background-color: #5CA9CC;
-        background-color: var(--t1); }
-      /* line 136, D:/Michal/Programovani/theTopfer/main.scss */
+        background-color: var(--t1);
+        transform-origin: 80% 20% 0; }
+      /* line 135, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project#project4 {
-        background-color: #80BCD7;
-        background-color: var(--t3); }
-  /* line 145, D:/Michal/Programovani/theTopfer/main.scss */
+        background-color: var(--t3);
+        transform-origin: 20% 20% 0; }
+        /* line 139, D:/Michal/Programovani/theTopfer/main.scss */
+        section#projects .project#project4 p {
+          margin-right: 35px; }
+  /* line 148, D:/Michal/Programovani/theTopfer/main.scss */
   section#games {
-    -webkit-perspective: 1000px;
     perspective: 1000px;
     padding-bottom: 20px; }
-    /* line 149, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 152, D:/Michal/Programovani/theTopfer/main.scss */
     section#games .game {
       float: left;
       width: 100%;
       height: 500px;
       position: relative;
-      -webkit-transition: 0.5s;
       transition: 0.5s;
       font-size: 2em; }
-      /* line 157, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 160, D:/Michal/Programovani/theTopfer/main.scss */
       section#games .game h2 {
         text-align: center;
         margin: 10px; }
-      /* line 162, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 165, D:/Michal/Programovani/theTopfer/main.scss */
       section#games .game:hover {
         z-index: 5;
-        -webkit-transform-origin: center;
         transform-origin: center;
+        transform: scale(1.02);
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
         box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75); }
-      /* line 171, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 174, D:/Michal/Programovani/theTopfer/main.scss */
       section#games .game#m-project {
-        background-color: #A4CFE3;
         background-color: var(--t5);
         /*color: var(--tri1);
                 h2, a {
                 color: var(--tri2);
             }*/ }
-        /* line 180, D:/Michal/Programovani/theTopfer/main.scss */
+        /* line 183, D:/Michal/Programovani/theTopfer/main.scss */
         section#games .game#m-project iframe {
           float: left; }
-        /* line 183, D:/Michal/Programovani/theTopfer/main.scss */
+        /* line 186, D:/Michal/Programovani/theTopfer/main.scss */
         section#games .game#m-project .info {
           float: left;
           position: absolute;
@@ -179,7 +170,7 @@ section {
           right: 0px;
           top: 0px;
           bottom: 0px; }
-        /* line 193, D:/Michal/Programovani/theTopfer/main.scss */
+        /* line 196, D:/Michal/Programovani/theTopfer/main.scss */
         section#games .game#m-project .play {
           position: absolute;
           width: 300px;
@@ -187,10 +178,10 @@ section {
           padding: 0px;
           bottom: 0px;
           left: 50px; }
-          /* line 201, D:/Michal/Programovani/theTopfer/main.scss */
+          /* line 204, D:/Michal/Programovani/theTopfer/main.scss */
           section#games .game#m-project .play img {
             width: 300px; }
-        /* line 205, D:/Michal/Programovani/theTopfer/main.scss */
+        /* line 208, D:/Michal/Programovani/theTopfer/main.scss */
         section#games .game#m-project .moreinfo {
           position: absolute;
           width: 300px;
@@ -202,53 +193,46 @@ section {
           text-transform: uppercase;
           font-weight: 700;
           text-align: center; }
-  /* line 221, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 224, D:/Michal/Programovani/theTopfer/main.scss */
   section#me {
     min-height: 740px;
     position: relative; }
-    /* line 225, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 228, D:/Michal/Programovani/theTopfer/main.scss */
     section#me #team {
       position: relative;
       top: 0px;
       height: 600px;
       z-index: 2;
       left: 50%;
-      -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
       display: inline-block;
-      -webkit-perspective: 1000px;
       perspective: 1000px; }
-      /* line 235, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 238, D:/Michal/Programovani/theTopfer/main.scss */
       section#me #team h2 {
         position: relative;
         margin: 5px 10px;
         font-size: 2em;
         text-align: center;
-        color: #000;
         color: var(--foreground-text); }
-      /* line 244, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 246, D:/Michal/Programovani/theTopfer/main.scss */
       section#me #team p {
         margin: 5px 20px;
         text-align: justify;
         font-size: 1.2em;
-        color: #282828;
         color: var(--foreground-text-gray); }
-      /* line 252, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 253, D:/Michal/Programovani/theTopfer/main.scss */
       section#me #team .member {
-        background: #80BCD7;
         background: var(--t3);
         width: 300px;
         padding: 0px 10px;
         margin: 0px 10px;
         position: relative;
         float: left;
-        -webkit-transition: 1s;
         transition: 1s;
-        -webkit-transform-origin: center;
         transform-origin: center;
         height: 100%;
         -webkit-font-smoothing: subpixel-antialiased; }
-        /* line 266, D:/Michal/Programovani/theTopfer/main.scss */
+        /* line 267, D:/Michal/Programovani/theTopfer/main.scss */
         section#me #team .member .portrait {
           position: relative;
           border-radius: 50%;
@@ -256,46 +240,42 @@ section {
           width: 200px;
           left: 50px;
           margin-top: 25px;
-          -webkit-transition: 1s;
           transition: 1s; }
-      /* line 277, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 278, D:/Michal/Programovani/theTopfer/main.scss */
       section#me #team .leader {
-        -webkit-transition: 1s;
         transition: 1s;
-        background: #5CA9CC;
         background: var(--t1);
         width: 500px;
         z-index: 3;
         font-size: 1.3em; }
-        /* line 287, D:/Michal/Programovani/theTopfer/main.scss */
+        /* line 288, D:/Michal/Programovani/theTopfer/main.scss */
         section#me #team .leader .portrait {
           width: 300px;
           height: 300px;
           left: 100px; }
-  /* line 297, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 298, D:/Michal/Programovani/theTopfer/main.scss */
   section#contact {
     position: relative;
     height: 1000px; }
-    /* line 302, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 303, D:/Michal/Programovani/theTopfer/main.scss */
     section#contact form {
       position: absolute;
       left: 50%;
-      -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
       color: #282828;
       /*input:not([type=submit]), textarea {
-                &:invalid {
-                    background: #FFF;
-                }
-                &:valid {
-                    background: #dcffdc;
-                    //background: var(--t9);
-                }
-            }*/ }
-      /* line 309, D:/Michal/Programovani/theTopfer/main.scss */
+            &:invalid {
+            background: #FFF;
+        }
+            &:valid {
+            background: #dcffdc;
+            //background: var(--t9);
+        }
+        }*/ }
+      /* line 310, D:/Michal/Programovani/theTopfer/main.scss */
       section#contact form label {
         font-size: 1.5em; }
-      /* line 312, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 313, D:/Michal/Programovani/theTopfer/main.scss */
       section#contact form input, section#contact form textarea {
         width: 100%;
         padding: 10px 20px;
@@ -305,15 +285,17 @@ section {
         border-radius: 4px;
         font-size: 1em;
         background: #FFF; }
-      /* line 322, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 323, D:/Michal/Programovani/theTopfer/main.scss */
       section#contact form textarea {
         resize: none;
         overflow: auto; }
-      /* line 338, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 339, D:/Michal/Programovani/theTopfer/main.scss */
       section#contact form input:focus, section#contact form textarea:focus {
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
         outline: none; }
-      /* line 346, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 347, D:/Michal/Programovani/theTopfer/main.scss */
       section#contact form input[type=submit] {
         position: relative;
         top: 0px;
@@ -322,19 +304,19 @@ section {
         border: none;
         font-size: 2em;
         font-weight: 700;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
         box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
         z-index: 2;
-        -webkit-transition: 0.5s ease-in-out;
         transition: 0.5s ease-in-out; }
-      /* line 360, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 361, D:/Michal/Programovani/theTopfer/main.scss */
       section#contact form .g-recaptcha {
         position: relative;
         left: 50%;
         width: 300px;
-        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         margin: 8px 0px; }
-    /* line 368, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 369, D:/Michal/Programovani/theTopfer/main.scss */
     section#contact #contactFrame {
       width: 447.156px;
       height: 57px;
@@ -342,7 +324,6 @@ section {
       top: 679px;
       position: absolute;
       left: 50%;
-      -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
       color: white;
       border: none;
@@ -353,185 +334,174 @@ section {
             box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);*/
       z-index: 0; }
 
-/* line 389, D:/Michal/Programovani/theTopfer/main.scss */
+/* line 390, D:/Michal/Programovani/theTopfer/main.scss */
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background: var(--s5);
+  color: #FFF;
+  margin: 0px;
+  padding: 10px 0px; }
+
+/* line 400, D:/Michal/Programovani/theTopfer/main.scss */
 #contactResult {
   color: #FFF;
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-align: center;
   line-height: 50px;
   border-radius: 4px; }
 
-/* line 397, D:/Michal/Programovani/theTopfer/main.scss */
+/* line 408, D:/Michal/Programovani/theTopfer/main.scss */
+.shadow, section#me #team .member, #ribbon-wrapper #ribbon {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75); }
+
+/* line 414, D:/Michal/Programovani/theTopfer/main.scss */
 nav {
   position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
   height: 80px;
-  background: #C8E2EE;
   background: var(--t7);
   text-transform: uppercase;
   font-weight: 400;
   z-index: 5;
-  -webkit-transition: 0.5s;
   transition: 0.5s; }
-
-/* line 411, D:/Michal/Programovani/theTopfer/main.scss */
-.shadow, section#me #team .member, #ribbon-wrapper #ribbon {
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75); }
-
-/* line 417, D:/Michal/Programovani/theTopfer/main.scss */
-#logo-small {
-  left: 0px;
-  position: absolute;
-  opacity: 0;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  height: 80px; }
-  /* line 424, D:/Michal/Programovani/theTopfer/main.scss */
-  #logo-small .cls-1 {
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    fill: #3B809F;
-    fill: var(--s2);
-    fill-rule: evenodd; }
-
-/* line 432, D:/Michal/Programovani/theTopfer/main.scss */
-.fixed {
-  position: fixed; }
-  /* line 435, D:/Michal/Programovani/theTopfer/main.scss */
-  .fixed #logo-small {
-    opacity: 1;
-    cursor: pointer; }
-    /* line 439, D:/Michal/Programovani/theTopfer/main.scss */
-    .fixed #logo-small:hover > .cls-1 {
-      fill: #255063;
-      fill: var(--s5); }
-  /* line 445, D:/Michal/Programovani/theTopfer/main.scss */
-  .fixed #ribbon-wrapper {
-    opacity: 1;
-    width: 250px;
-    height: 250px; }
-
-/* line 452, D:/Michal/Programovani/theTopfer/main.scss */
-#social {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 300px;
-  height: 60px;
-  margin-right: 10px;
-  margin-left: 10px; }
-  /* line 461, D:/Michal/Programovani/theTopfer/main.scss */
-  #social .socialimg {
-    height: calc(100% - 10px);
-    margin: 5px; }
-
-/* line 467, D:/Michal/Programovani/theTopfer/main.scss */
-#menu {
-  position: relative;
-  list-style-type: none;
-  top: 0px;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  left: 50%;
-  right: 320px;
-  margin: 0px;
-  padding: 0px;
-  background: #C8E2EE;
-  background: var(--t7);
-  height: 80px;
-  z-index: 10;
-  float: left;
-  display: inline-block; }
-  /* line 483, D:/Michal/Programovani/theTopfer/main.scss */
-  #menu > li {
-    position: relative;
-    text-align: center;
-    margin: 0px;
-    padding: 5px 1.2em;
-    height: 70px;
-    line-height: 70px;
-    color: #3B809F;
-    color: var(--s2);
+  /* line 427, D:/Michal/Programovani/theTopfer/main.scss */
+  nav #logo-small {
+    left: 0px;
+    position: absolute;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    height: 80px; }
+    /* line 434, D:/Michal/Programovani/theTopfer/main.scss */
+    nav #logo-small .cls-1 {
+      transition: 0.5s;
+      fill: #3B809F;
+      fill: var(--s2);
+      fill-rule: evenodd; }
+  /* line 442, D:/Michal/Programovani/theTopfer/main.scss */
+  nav #social {
+    position: absolute;
     top: 0px;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    background: inherit;
+    right: 0px;
+    width: 300px;
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 10px; }
+    /* line 451, D:/Michal/Programovani/theTopfer/main.scss */
+    nav #social .socialimg {
+      height: calc(100% - 10px);
+      margin: 5px; }
+  /* line 457, D:/Michal/Programovani/theTopfer/main.scss */
+  nav #menu {
+    position: relative;
+    list-style-type: none;
+    top: 0px;
+    transform: translateX(-50%);
+    left: 50%;
+    right: 320px;
+    margin: 0px;
+    padding: 0px;
+    background: var(--t7);
+    height: 80px;
+    z-index: 10;
     float: left;
-    display: block;
-    font-size: 2em;
-    cursor: pointer; }
-  /* line 507, D:/Michal/Programovani/theTopfer/main.scss */
-  #menu > li:hover {
-    color: #16303B;
-    color: var(--s7); }
+    display: inline-block; }
+    /* line 473, D:/Michal/Programovani/theTopfer/main.scss */
+    nav #menu > li {
+      position: relative;
+      text-align: center;
+      margin: 0px;
+      padding: 5px 1.2em;
+      height: 70px;
+      line-height: 70px;
+      color: var(--s2);
+      top: 0px;
+      transition: 0.5s;
+      background: inherit;
+      float: left;
+      display: block;
+      font-size: 2em;
+      cursor: pointer; }
+      /* line 492, D:/Michal/Programovani/theTopfer/main.scss */
+      nav #menu > li.currentPage {
+        background: var(--t5); }
+    /* line 497, D:/Michal/Programovani/theTopfer/main.scss */
+    nav #menu > li:hover {
+      color: var(--s7); }
+  /* line 503, D:/Michal/Programovani/theTopfer/main.scss */
+  nav.fixed {
+    position: fixed; }
+    /* line 506, D:/Michal/Programovani/theTopfer/main.scss */
+    nav.fixed #logo-small {
+      opacity: 1;
+      cursor: pointer; }
+      /* line 510, D:/Michal/Programovani/theTopfer/main.scss */
+      nav.fixed #logo-small:hover > .cls-1 {
+        fill: #255063;
+        fill: var(--s5); }
+    /* line 516, D:/Michal/Programovani/theTopfer/main.scss */
+    nav.fixed #ribbon-wrapper {
+      opacity: 1;
+      width: 250px;
+      height: 250px; }
 
-/* line 513, D:/Michal/Programovani/theTopfer/main.scss */
+/* line 524, D:/Michal/Programovani/theTopfer/main.scss */
 #slider {
   height: calc(100vh - 80px);
   position: fixed;
   width: 100%;
   overflow: hidden; }
-  /* line 520, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 531, D:/Michal/Programovani/theTopfer/main.scss */
   #slider #innerSlider {
     position: absolute;
     left: 0%;
     height: 100%;
-    -webkit-transition: 1s;
     transition: 1s;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex; }
-    /* line 527, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 538, D:/Michal/Programovani/theTopfer/main.scss */
     #slider #innerSlider .slideritem {
       position: relative;
       height: 100%;
       top: 0%;
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
       flex: 1; }
-      /* line 533, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 544, D:/Michal/Programovani/theTopfer/main.scss */
       #slider #innerSlider .slideritem:nth-child(1) {
-        background: #4AA0C7;
         background: var(--ana1); }
-      /* line 533, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 544, D:/Michal/Programovani/theTopfer/main.scss */
       #slider #innerSlider .slideritem:nth-child(2) {
-        background: #4AA0C7;
         background: var(--ana2); }
-      /* line 533, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 544, D:/Michal/Programovani/theTopfer/main.scss */
       #slider #innerSlider .slideritem:nth-child(3) {
-        background: #4AA0C7;
         background: var(--ana3); }
-      /* line 533, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 544, D:/Michal/Programovani/theTopfer/main.scss */
       #slider #innerSlider .slideritem:nth-child(4) {
-        background: #4AA0C7;
         background: var(--ana4); }
-      /* line 533, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 544, D:/Michal/Programovani/theTopfer/main.scss */
       #slider #innerSlider .slideritem:nth-child(5) {
-        background: #4AA0C7;
         background: var(--ana5); }
-      /* line 533, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 544, D:/Michal/Programovani/theTopfer/main.scss */
       #slider #innerSlider .slideritem:nth-child(6) {
-        background: #4AA0C7;
         background: var(--ana6); }
-      /* line 533, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 544, D:/Michal/Programovani/theTopfer/main.scss */
       #slider #innerSlider .slideritem:nth-child(7) {
-        background: #4AA0C7;
         background: var(--ana7); }
-      /* line 540, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 551, D:/Michal/Programovani/theTopfer/main.scss */
       #slider #innerSlider .slideritem .sliderbox {
         position: absolute;
         left: 50%;
         top: 50%;
-        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%); }
-      /* line 547, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 558, D:/Michal/Programovani/theTopfer/main.scss */
       #slider #innerSlider .slideritem.about {
         background-image: url(img/slider/code.jpg);
         background-size: cover;
         background-repeat: no-repeat; }
-        /* line 552, D:/Michal/Programovani/theTopfer/main.scss */
+        /* line 563, D:/Michal/Programovani/theTopfer/main.scss */
         #slider #innerSlider .slideritem.about .sliderbox {
           color: #FFF;
           color: rgba(255, 255, 255, 0.7);
@@ -540,17 +510,15 @@ nav {
           font-weight: 300;
           line-height: 80px;
           left: 2%;
-          -webkit-transform: none;
           transform: none; }
-          /* line 562, D:/Michal/Programovani/theTopfer/main.scss */
+          /* line 573, D:/Michal/Programovani/theTopfer/main.scss */
           #slider #innerSlider .slideritem.about .sliderbox b {
             color: #FFF;
             color: white; }
-      /* line 569, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 580, D:/Michal/Programovani/theTopfer/main.scss */
       #slider #innerSlider .slideritem.randomColorEveryDay {
-        background: #4AA0C7;
         background: var(--randomColorEveryDay); }
-        /* line 573, D:/Michal/Programovani/theTopfer/main.scss */
+        /* line 584, D:/Michal/Programovani/theTopfer/main.scss */
         #slider #innerSlider .slideritem.randomColorEveryDay .sliderbox {
           background: rgba(0, 0, 0, 0.5);
           color: #FFF;
@@ -560,23 +528,23 @@ nav {
           text-align: center;
           font-size: 2em;
           margin-top: 5%; }
-          /* line 583, D:/Michal/Programovani/theTopfer/main.scss */
+          /* line 594, D:/Michal/Programovani/theTopfer/main.scss */
           #slider #innerSlider .slideritem.randomColorEveryDay .sliderbox h2 {
             font-size: 1em;
             margin-bottom: 0px;
             margin-top: 1em; }
-          /* line 589, D:/Michal/Programovani/theTopfer/main.scss */
+          /* line 600, D:/Michal/Programovani/theTopfer/main.scss */
           #slider #innerSlider .slideritem.randomColorEveryDay .sliderbox #RCD {
             font-size: 2em; }
-          /* line 593, D:/Michal/Programovani/theTopfer/main.scss */
+          /* line 604, D:/Michal/Programovani/theTopfer/main.scss */
           #slider #innerSlider .slideritem.randomColorEveryDay .sliderbox a {
             color: inherit; }
-      /* line 599, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 610, D:/Michal/Programovani/theTopfer/main.scss */
       #slider #innerSlider .slideritem.m-project {
         background-image: url(img/slider/m-project-blur.png);
         background-size: cover;
         background-repeat: no-repeat; }
-        /* line 604, D:/Michal/Programovani/theTopfer/main.scss */
+        /* line 615, D:/Michal/Programovani/theTopfer/main.scss */
         #slider #innerSlider .slideritem.m-project .sliderbox {
           background: rgba(0, 0, 0, 0.5);
           color: #FFF;
@@ -586,10 +554,10 @@ nav {
           text-align: center;
           font-size: 2em;
           margin-top: 5%; }
-          /* line 614, D:/Michal/Programovani/theTopfer/main.scss */
+          /* line 625, D:/Michal/Programovani/theTopfer/main.scss */
           #slider #innerSlider .slideritem.m-project .sliderbox iframe {
             float: left; }
-          /* line 617, D:/Michal/Programovani/theTopfer/main.scss */
+          /* line 628, D:/Michal/Programovani/theTopfer/main.scss */
           #slider #innerSlider .slideritem.m-project .sliderbox div {
             float: left;
             position: absolute;
@@ -597,7 +565,7 @@ nav {
             right: 0px;
             top: 0px;
             bottom: 0px; }
-          /* line 625, D:/Michal/Programovani/theTopfer/main.scss */
+          /* line 636, D:/Michal/Programovani/theTopfer/main.scss */
           #slider #innerSlider .slideritem.m-project .sliderbox .play {
             position: absolute;
             width: 250px;
@@ -605,10 +573,10 @@ nav {
             padding: 0px;
             bottom: 0px;
             left: 0px; }
-            /* line 633, D:/Michal/Programovani/theTopfer/main.scss */
+            /* line 644, D:/Michal/Programovani/theTopfer/main.scss */
             #slider #innerSlider .slideritem.m-project .sliderbox .play img {
               width: 250px; }
-          /* line 637, D:/Michal/Programovani/theTopfer/main.scss */
+          /* line 648, D:/Michal/Programovani/theTopfer/main.scss */
           #slider #innerSlider .slideritem.m-project .sliderbox .moreinfo {
             color: #FFF;
             position: absolute;
@@ -620,18 +588,16 @@ nav {
             line-height: 100px;
             text-transform: uppercase;
             font-weight: 700; }
-  /* line 654, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 665, D:/Michal/Programovani/theTopfer/main.scss */
   #slider #cpanel {
     position: absolute;
     left: 50%;
-    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     bottom: 8px;
     opacity: 0.7; }
-    /* line 661, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 672, D:/Michal/Programovani/theTopfer/main.scss */
     #slider #cpanel .circle, #slider #cpanel .selected {
       opacity: 0.5;
-      -webkit-transition: 0.5s;
       transition: 0.5s;
       height: 20px;
       width: 20px;
@@ -639,40 +605,35 @@ nav {
       border-radius: 50%;
       margin: 6px;
       float: left; }
-    /* line 672, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 683, D:/Michal/Programovani/theTopfer/main.scss */
     #slider #cpanel .circle:hover {
       opacity: 1; }
-    /* line 676, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 687, D:/Michal/Programovani/theTopfer/main.scss */
     #slider #cpanel .selected {
       background: white;
       position: absolute;
       opacity: 1;
-      -webkit-transition: 1s;
       transition: 1s; }
 
-/* line 685, D:/Michal/Programovani/theTopfer/main.scss */
+/* line 696, D:/Michal/Programovani/theTopfer/main.scss */
 #logo {
   position: fixed;
   left: 50%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   top: 0px;
   margin: 10px;
   height: 300px;
   z-index: 3;
   opacity: 0.7;
-  -webkit-transition: 1s;
   transition: 1s; }
+  /* line 706, D:/Michal/Programovani/theTopfer/main.scss */
+  #logo:hover {
+    opacity: 0.9; }
+  /* line 709, D:/Michal/Programovani/theTopfer/main.scss */
+  #logo .logoimg {
+    height: 100%; }
 
-/* line 696, D:/Michal/Programovani/theTopfer/main.scss */
-#logo:hover {
-  opacity: 0.9; }
-
-/* line 699, D:/Michal/Programovani/theTopfer/main.scss */
-.logoimg {
-  height: 100%; }
-
-/* line 703, D:/Michal/Programovani/theTopfer/main.scss */
+/* line 714, D:/Michal/Programovani/theTopfer/main.scss */
 #ribbon-wrapper {
   pointer-events: none;
   position: fixed;
@@ -682,25 +643,20 @@ nav {
   width: 0px;
   height: 0px;
   overflow: hidden;
-  -webkit-transition: 0.5s;
   transition: 0.5s; }
-  /* line 714, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 725, D:/Michal/Programovani/theTopfer/main.scss */
   #ribbon-wrapper #ribbon-rotate {
     position: absolute;
     width: 600px;
     height: 70px;
     left: -325px;
     top: 30px;
-    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    -webkit-transform-origin: right;
     transform-origin: right; }
-  /* line 724, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 735, D:/Michal/Programovani/theTopfer/main.scss */
   #ribbon-wrapper #ribbon {
     pointer-events: all;
-    background: #000;
     background: var(--foreground-text);
-    color: #4AA0C7;
     color: var(--randomColorEveryDay);
     position: absolute;
     top: 0px;
@@ -709,26 +665,24 @@ nav {
     padding: 0px;
     margin: 0px;
     left: 0px;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
     font-size: 1.3em;
     font-weight: 300; }
-    /* line 743, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 754, D:/Michal/Programovani/theTopfer/main.scss */
     #ribbon-wrapper #ribbon #left {
       position: absolute;
       left: 0px;
       right: 300px;
       height: 100%; }
-      /* line 749, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 760, D:/Michal/Programovani/theTopfer/main.scss */
       #ribbon-wrapper #ribbon #left a {
-        color: #4AA0C7;
         color: var(--randomColorEveryDay);
         position: absolute;
         bottom: 40px;
         text-align: center;
         width: 100%;
         font-size: 0.9em; }
-    /* line 759, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 770, D:/Michal/Programovani/theTopfer/main.scss */
     #ribbon-wrapper #ribbon #right {
       position: absolute;
       left: 300px;
@@ -737,10 +691,10 @@ nav {
       padding: 10px 0px;
       top: 0px;
       text-align: center; }
-    /* line 769, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 780, D:/Michal/Programovani/theTopfer/main.scss */
     #ribbon-wrapper #ribbon:hover {
       left: 300px; }
-    /* line 774, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 785, D:/Michal/Programovani/theTopfer/main.scss */
     #ribbon-wrapper #ribbon .switch {
       position: relative;
       display: inline-block;
@@ -748,10 +702,10 @@ nav {
       height: 20px;
       bottom: -20px;
       left: 120px; }
-    /* line 782, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 793, D:/Michal/Programovani/theTopfer/main.scss */
     #ribbon-wrapper #ribbon .switch input {
       display: none; }
-    /* line 784, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 795, D:/Michal/Programovani/theTopfer/main.scss */
     #ribbon-wrapper #ribbon .slider {
       position: absolute;
       cursor: pointer;
@@ -762,7 +716,7 @@ nav {
       background-color: #ccc;
       -webkit-transition: .4s;
       transition: .4s; }
-    /* line 795, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 806, D:/Michal/Programovani/theTopfer/main.scss */
     #ribbon-wrapper #ribbon .slider:before {
       position: absolute;
       content: "";
@@ -773,94 +727,93 @@ nav {
       background-color: white;
       -webkit-transition: .4s;
       transition: .4s; }
-    /* line 807, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 818, D:/Michal/Programovani/theTopfer/main.scss */
     #ribbon-wrapper #ribbon input:checked + .slider {
-      background-color: #4AA0C7;
       background-color: var(--randomColorEveryDay); }
-    /* line 812, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 823, D:/Michal/Programovani/theTopfer/main.scss */
     #ribbon-wrapper #ribbon input:focus + .slider {
       box-shadow: 0 0 1px #4AA0C7;
       box-shadow: 0 0 1px var(--randomColorEveryDay); }
-    /* line 817, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 828, D:/Michal/Programovani/theTopfer/main.scss */
     #ribbon-wrapper #ribbon input:checked + .slider:before {
       -webkit-transform: translateX(14px);
+      -ms-transform: translateX(14px);
       transform: translateX(14px); }
-    /* line 823, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 834, D:/Michal/Programovani/theTopfer/main.scss */
     #ribbon-wrapper #ribbon .slider.round {
       border-radius: 18px; }
-    /* line 827, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 838, D:/Michal/Programovani/theTopfer/main.scss */
     #ribbon-wrapper #ribbon .slider.round:before {
       border-radius: 50%; }
 
 @media screen and (max-width: 1600px) {
-  /* line 836, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 847, D:/Michal/Programovani/theTopfer/main.scss */
   section#projects .project h2 {
     font-size: 1.9em; }
-  /* line 839, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 850, D:/Michal/Programovani/theTopfer/main.scss */
   section#projects .project p {
     top: 52px;
     font-size: 1.2em; }
-  /* line 843, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 854, D:/Michal/Programovani/theTopfer/main.scss */
   section#projects .project .download {
     font-size: 1.4em; }
-  /* line 846, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 857, D:/Michal/Programovani/theTopfer/main.scss */
   section#projects .project .source {
     left: 450px;
     font-size: 1.4em; }
-  /* line 854, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 865, D:/Michal/Programovani/theTopfer/main.scss */
   section#me #team .member {
     width: 250px;
     padding: 0px 10px; }
-    /* line 858, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 869, D:/Michal/Programovani/theTopfer/main.scss */
     section#me #team .member .portrait {
       height: 150px;
       width: 150px;
       left: 50px; }
-  /* line 865, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 876, D:/Michal/Programovani/theTopfer/main.scss */
   section#me #team .leader {
     width: 400px; }
-    /* line 868, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 879, D:/Michal/Programovani/theTopfer/main.scss */
     section#me #team .leader .portrait {
       width: 200px;
       height: 200px;
       left: 100px; } }
 
 @media screen and (max-width: 1300px) {
-  /* line 879, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 890, D:/Michal/Programovani/theTopfer/main.scss */
   #logo {
     left: 20vw;
     width: 60vw;
     top: 0px;
-    -webkit-transform: none;
     transform: none;
     height: auto; }
-    /* line 886, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 897, D:/Michal/Programovani/theTopfer/main.scss */
     #logo .logoimg {
       width: 100%;
       height: auto; }
-  /* line 893, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 904, D:/Michal/Programovani/theTopfer/main.scss */
   section#games .game {
     width: 100%;
     height: 1000px; }
-    /* line 898, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 909, D:/Michal/Programovani/theTopfer/main.scss */
     section#games .game#m-project iframe, section#games .game#m-project .info {
       float: left;
       position: relative;
       width: 100%;
       height: 50%;
       left: 0px; }
-      /* line 905, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 916, D:/Michal/Programovani/theTopfer/main.scss */
       section#games .game#m-project iframe .play, section#games .game#m-project .info .play {
         position: absolute;
         width: 50%;
         height: 30%;
         left: 0px; }
-        /* line 911, D:/Michal/Programovani/theTopfer/main.scss */
+        /* line 922, D:/Michal/Programovani/theTopfer/main.scss */
         section#games .game#m-project iframe .play img, section#games .game#m-project .info .play img {
           height: 100%;
           width: auto;
           max-width: 100%; }
-      /* line 917, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 928, D:/Michal/Programovani/theTopfer/main.scss */
       section#games .game#m-project iframe .moreinfo, section#games .game#m-project .info .moreinfo {
         position: absolute;
         width: 50%;
@@ -869,30 +822,28 @@ nav {
         line-height: normal;
         font-size: 0.8em;
         padding-top: 5%; }
-  /* line 931, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 942, D:/Michal/Programovani/theTopfer/main.scss */
   section#projects {
     padding-bottom: 20px; }
-    /* line 934, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 945, D:/Michal/Programovani/theTopfer/main.scss */
     section#projects .project {
       width: 100%; }
-      /* line 937, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 948, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project#project1, section#projects .project#project3 {
-        background-color: #80BCD7;
         background-color: var(--t3); }
-      /* line 942, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 952, D:/Michal/Programovani/theTopfer/main.scss */
       section#projects .project#project2, section#projects .project#project4 {
-        background-color: #5CA9CC;
         background-color: var(--t1); }
-  /* line 949, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 958, D:/Michal/Programovani/theTopfer/main.scss */
   section#me {
     height: 1300px; }
-    /* line 953, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 962, D:/Michal/Programovani/theTopfer/main.scss */
     section#me #team .member {
       width: 80%;
       height: 250px;
       padding: 0px 10px;
       margin: 8px 10%; }
-      /* line 959, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 968, D:/Michal/Programovani/theTopfer/main.scss */
       section#me #team .member .portrait {
         float: left;
         height: 150px;
@@ -900,68 +851,67 @@ nav {
         left: 0px;
         margin: 50px 5px;
         margin-left: 25px; }
-      /* line 968, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 977, D:/Michal/Programovani/theTopfer/main.scss */
       section#me #team .member h2 {
         float: left;
         width: 50%; }
-      /* line 972, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 981, D:/Michal/Programovani/theTopfer/main.scss */
       section#me #team .member p {
         float: left; }
-    /* line 977, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 986, D:/Michal/Programovani/theTopfer/main.scss */
     section#me #team .leader {
       height: 250px;
       font-size: 1em; }
-      /* line 981, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 990, D:/Michal/Programovani/theTopfer/main.scss */
       section#me #team .leader .portrait {
         width: 150px;
         height: 150px; }
-  /* line 991, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 1000, D:/Michal/Programovani/theTopfer/main.scss */
   #menu {
-    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     left: 50%;
     margin: 0px;
     padding: 0px;
     height: 80px; }
-    /* line 998, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 1007, D:/Michal/Programovani/theTopfer/main.scss */
     #menu > li {
       padding: 5px;
       width: 150px;
       float: left;
       font-size: 1.5em; }
-  /* line 1011, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 1020, D:/Michal/Programovani/theTopfer/main.scss */
   #slider #innerSlider .slideritem.about .sliderbox {
     width: 98%;
     font-size: 7vw;
     line-height: normal; }
-  /* line 1019, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 1028, D:/Michal/Programovani/theTopfer/main.scss */
   #slider #innerSlider .slideritem.randomColorEveryDay .sliderbox {
     max-width: 100%;
     font-size: 2em; }
-  /* line 1026, D:/Michal/Programovani/theTopfer/main.scss */
+  /* line 1035, D:/Michal/Programovani/theTopfer/main.scss */
   #slider #innerSlider .slideritem.m-project .sliderbox {
     width: 80%;
     height: 60%;
     font-size: 2em;
     margin-top: 5%; }
-    /* line 1032, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 1041, D:/Michal/Programovani/theTopfer/main.scss */
     #slider #innerSlider .slideritem.m-project .sliderbox iframe, #slider #innerSlider .slideritem.m-project .sliderbox div {
       float: left;
       position: relative;
       width: 100%;
       height: 50%;
       left: 0px; }
-    /* line 1039, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 1048, D:/Michal/Programovani/theTopfer/main.scss */
     #slider #innerSlider .slideritem.m-project .sliderbox .play {
       position: absolute;
       width: 50%;
       height: 30%; }
-      /* line 1044, D:/Michal/Programovani/theTopfer/main.scss */
+      /* line 1053, D:/Michal/Programovani/theTopfer/main.scss */
       #slider #innerSlider .slideritem.m-project .sliderbox .play img {
         height: 100%;
         width: auto;
         max-width: 100%; }
-    /* line 1050, D:/Michal/Programovani/theTopfer/main.scss */
+    /* line 1059, D:/Michal/Programovani/theTopfer/main.scss */
     #slider #innerSlider .slideritem.m-project .sliderbox .moreinfo {
       position: absolute;
       width: 50%;
@@ -970,3 +920,5 @@ nav {
       line-height: normal;
       font-size: 0.8em;
       padding-top: 5%; } }
+
+/*# sourceMappingURL=main.css.map */

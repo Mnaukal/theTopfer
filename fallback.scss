@@ -10,7 +10,7 @@ main {
 
 section {
     h1 {
-        color: #FFFFFF;
+        color: #151515;
         //color: var(--s5);
     }
     &#projects {
@@ -23,16 +23,16 @@ section {
                 //color: var(--foreground-text);
             }
             a {
-                color: #151515;
+                color: #b74e00;
                 //color: var(--foreground-text);
             }
 
             &#project1{
-                background-color: #80BCD7;
+                background-color: #ffcca6;
                 //background-color: var(--t3);
 
                 .project-picture {
-                    background-color: #4AA0C7;
+                    background-color: #ff7f20;
                     //background-color: var(--randomColorEveryDay);
                     color: #282828;
                     //color: var(--foreground-text-gray);
@@ -40,17 +40,17 @@ section {
             }
 
             &#project2{
-                background-color: #5CA9CC;
+                background-color: #ffa968;
                 //background-color: var(--t1);             
             }
 
             &#project3{
-                background-color: #5CA9CC;
+                background-color: #ffa968;
                 //background-color: var(--t1);
             }
 
             &#project4{
-                background-color: #80BCD7;
+                background-color: #ffcca6;
                 //background-color: var(--t3);                
             }
         }
@@ -61,7 +61,7 @@ section {
     &#games {
         .game {
             &#m-project {
-                background-color: #A4CFE3;
+                background-color: #ffa968;
                 //background-color: var(--t5);
             }
         }
@@ -80,12 +80,12 @@ section {
             }
 
             .member {
-                background: #80BCD7;
+                background: #ffa968;
                 //background: var(--t3);
             }
 
             .leader {
-                background: #5CA9CC;
+                background: #ff7f20;
                 //background: var(--t1);
             }
         }       
@@ -93,85 +93,84 @@ section {
 }
 
 nav {
-    background: #151515;
+    background: #ffffff;
     //background: var(--t7);
-}
 
-#logo-small {
-    .cls-1 {
-        fill: #EEEEEE;
-        //fill: var(--s2);
-    }    
-}
-
-.fixed {
     #logo-small {
-        &:hover > .cls-1 {
-            fill: #FFFFFF;
-            //fill: var(--s5);
-        }
+        .cls-1 {
+            fill: #ffa968;
+            //fill: var(--s2);
+        }    
     }
-}
-
-#social {
-    .socialimg {
-
-    }
-}
-
-
-#menu {
-    background: #151515;
-    //background: var(--t7);
-
-    > li {
-        color: #EEEEEE;
-        //color: var(--s2);
-        .currentPage {
+    
+    #social {
+        .socialimg {
 
         }
     }
 
-    > li:hover {
-        color: #16303B;
-        //color: var(--s7);
+
+    #menu {
+        background: #ffffff;
+        //background: var(--t7);
+
+        > li {
+            color: #a5a5a5;
+            //color: var(--s2);
+            &.currentPage {
+                color: #ff7f20;
+            }
+        }
+
+        > li:hover {
+            color: #ff7f20;
+            //color: var(--s7);
+        }
+    }
+
+    &.fixed {
+        #logo-small {            
+            &:hover > .cls-1 {
+                fill: #ff7f20;
+                //fill: var(--s5);
+            }
+        }
     }
 }
 
 #slider {
     #innerSlider {
         .slideritem {
-            background: #4AA0C7;      
-        }
-    }
 
-    &.about{
-        .sliderbox {
-            color: #FFF;
-            color: rgba(255, 255, 255, 0.7);
-            b {
-                color: #FFF;
-                color: rgba(255, 255, 255, 1);
+            &.about{
+                .sliderbox {
+                    color: #FFF;
+                    color: rgba(255, 255, 255, 0.7);
+                    b {
+                        color: #FFF;
+                        color: rgba(255, 255, 255, 1);
+                    }
+                }
             }
-        }
-    }
 
-    &.randomColorEveryDay {
-        background: #4AA0C7;
-        //background: var(--randomColorEveryDay);
+            &.randomColorEveryDay {
+                background: url(img/color-fallback.jpg) !important;
+                //background: var(--randomColorEveryDay);
 
-        .sliderbox {
-            background: rgba(0, 0, 0, 0.5);
-            color: #FFF;
-        }
-    }
+                .sliderbox {
+                    background: rgba(0, 0, 0, 0.5);
+                    color: #FFF;
+                }
+            }
 
-    &.m-project {
-        .sliderbox {
-            background: rgba(0, 0, 0, 0.5);
-            color: #FFF;
-            .moreinfo {
-                color: #FFF;
+            &.m-project {
+                .sliderbox {
+                    background: rgba(0, 0, 0, 0.5);
+                    color: #FFF;
+                    .moreinfo {
+                        color: #FFF;
+                    }
+                }
             }
         }
     }
@@ -179,11 +178,11 @@ nav {
 
 #ribbon-wrapper {
     #ribbon {
-        background: #151515;
+        background: #FFF;
         //background: var(--foreground-text);
-        color: #4AA0C7;
+        color: #151515;
         //color: var(--randomColorEveryDay);
-        
+
         #left {
             a {
                 color: #4AA0C7;
@@ -214,12 +213,12 @@ nav {
     section#projects {
         .project {
             &#project1, &#project3{
-                background-color: #80BCD7;
+                background-color: #ffcca6;
                 //background-color: var(--t3);
             }
 
             &#project2, &#project4{
-                background-color: #5CA9CC;
+                background-color: #ffa968;
                 //background-color: var(--t1);             
             }
         }
