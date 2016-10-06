@@ -1,4 +1,4 @@
-var moveTime = 5;
+var moveTime = 4;
 var timer = 0;
 var countTimer = true;
 var itemCount = 0;
@@ -16,10 +16,10 @@ $(document).ready(function() {
         }
     }, 1000);    
 
-    $("#slider").mouseenter(function() {
+    $(".sliderbox").mouseenter(function() {
         countTimer = false;
     });
-    $("#slider").mouseleave(function() {
+    $(".sliderbox").mouseleave(function() {
         countTimer = true;
     });
 
@@ -33,7 +33,7 @@ $(document).ready(function() {
 
     $("#enableRandom").change(function(){
         if($(this).is(":checked"))
-            $("#stylesheet").attr("href", "http://random-color-of-the-day.funsite.cz/stylesheet-variables.php");        
+            $("#stylesheet").attr("href", "http://randomcoloreveryday.com/stylesheet-variables.php");        
         else
             $("#stylesheet").attr("href", "fallback.css");
         

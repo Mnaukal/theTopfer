@@ -28,7 +28,7 @@ section {
             }
 
             &#project1{
-                background-color: #ffcca6;
+                background-color: #ffffff;
                 //background-color: var(--t3);
 
                 .project-picture {
@@ -40,17 +40,17 @@ section {
             }
 
             &#project2{
-                background-color: #ffa968;
+                background-color: #ff9545;
                 //background-color: var(--t1);             
             }
 
             &#project3{
-                background-color: #ffa968;
+                background-color: #ff9545;
                 //background-color: var(--t1);
             }
 
             &#project4{
-                background-color: #ffcca6;
+                background-color: #fdfdfd;
                 //background-color: var(--t3);                
             }
         }
@@ -61,7 +61,7 @@ section {
     &#games {
         .game {
             &#m-project {
-                background-color: #ffa968;
+                background-color: #ffffff;
                 //background-color: var(--t5);
             }
         }
@@ -80,15 +80,39 @@ section {
             }
 
             .member {
-                background: #ffa968;
+                background: #ff9545;
                 //background: var(--t3);
             }
 
             .leader {
-                background: #ff7f20;
+                background: #ffffff;
                 //background: var(--t1);
             }
         }       
+    }
+    &#contact {
+
+
+        form {
+            color: #282828;
+
+            input, textarea {
+            //    border: 2px solid var(--s6);
+                border: 2px solid #ff9545;
+                background: #FFF;
+            }
+
+
+            input[type=submit] {
+                background: #ff9545;
+               // background: var(--s6);
+                color: white;
+          
+            }
+        }
+        #contactFrame {
+            color: white;
+        }
     }
 }
 
@@ -123,7 +147,7 @@ nav {
         }
 
         > li:hover {
-            color: #ff7f20;
+            color: #9f4400;
             //color: var(--s7);
         }
     }
@@ -185,7 +209,7 @@ nav {
 
         #left {
             a {
-                color: #4AA0C7;
+                color: #151515;
                 //color: var(--randomColorEveryDay);
             }
         }
@@ -213,12 +237,12 @@ nav {
     section#projects {
         .project {
             &#project1, &#project3{
-                background-color: #ffcca6;
+                background-color: #ffffff;
                 //background-color: var(--t3);
             }
 
             &#project2, &#project4{
-                background-color: #ffa968;
+                background-color: #ff9545;
                 //background-color: var(--t1);             
             }
         }
