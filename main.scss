@@ -299,90 +299,133 @@ section {
         position: relative;
         height: 830px;
 
-
-        form {
+        #contactForm {
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #282828;
+            right: 50%;
+            width: 500px;            
+
+            form {
+                position: absolute;
+                left: 0px;
+                right: 50px;
+                //transform: translateX(-50%);
+                color: #282828;
 
 
-            label {
-                font-size: 1.5em;
-            }
-            input, textarea {
-                width: 100%;
-                padding: 10px 20px;
-                margin: 4px 0;
-                box-sizing: border-box;
-                border: 2px solid var(--s6);
-                border-radius: 4px;
-                font-size: 1em;
+                label {
+                    font-size: 1.5em;
+                }
+                input, textarea {
+                    width: 100%;
+                    padding: 10px 20px;
+                    margin: 4px 0;
+                    box-sizing: border-box;
+                    border: 2px solid var(--s6);
+                    border-radius: 4px;
+                    font-size: 1em;
+                    background: #FFF;
+                }
+                textarea {
+                    resize: none;
+                    overflow: auto;
+                }
+
+                /*input:not([type=submit]), textarea {
+                &:invalid {
                 background: #FFF;
             }
-            textarea {
-                resize: none;
-                overflow: auto;
+                &:valid {
+                background: #dcffdc;
+                //background: var(--t9);
             }
+            }*/
 
-            /*input:not([type=submit]), textarea {
-            &:invalid {
-            background: #FFF;
-        }
-            &:valid {
-            background: #dcffdc;
-            //background: var(--t9);
-        }
-        }*/
+                input, textarea {
+                    &:focus {
+                        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+                        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+                        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+                        outline: none;
+                    }
+                }
 
-            input, textarea {
-                &:focus {
-                    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-                    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-                    outline: none;
+                input[type=submit] {
+                    position: relative;
+                    top: 0px;
+                    background: var(--s6);
+                    color: white;
+                    border: none;
+                    font-size: 2em;
+                    font-weight: 700;
+                    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+                    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+                    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+                    z-index: 2;
+                    transition: 0.5s ease-in-out;
+                }
+                .g-recaptcha {
+                    position: relative;
+                    left: 50%;
+                    width: 300px;
+                    transform: translateX(-50%);
+                    margin: 8px 0px;
                 }
             }
-
-            input[type=submit] {
-                position: relative;
-                top: 0px;
-                background: var(--s6);
+            #contactFrame {
+                width: 450px;
+                height: 50px;
+                position: absolute;
+                top: 560px;
+                left: 0px;
+                right: 50px;
+                //transform: translateX(-50%);
+                //background: var(--s6);
                 color: white;
                 border: none;
                 font-size: 2em;
                 font-weight: 700;
-                -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+                /*-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
                 -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
-                box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
-                z-index: 2;
-                transition: 0.5s ease-in-out;
-            }
-            .g-recaptcha {
-                position: relative;
-                left: 50%;
-                width: 300px;
-                transform: translateX(-50%);
-                margin: 8px 0px;
+                box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);*/
+                z-index: 0;
             }
         }
-        #contactFrame {
-            width: 447.156px;
-            height: 57px;
-            height: 50px;
-            top: 679px;
+        #socialIcons {
             position: absolute;
             left: 50%;
-            transform: translateX(-50%);
-            //background: var(--s6);
-            color: white;
-            border: none;
-            font-size: 2em;
-            font-weight: 700;
-            /*-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
-            -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
-            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);*/
-            z-index: 0;
+            width: 500px;
+            
+            ul {
+                list-style-type: none;
+                width: 450px;
+                left: 50px;
+                position: absolute;
+                margin: 0px;
+                padding: 0px;
+                font-size: 2em;
+                
+                > li {
+                    height: 80px;
+                    margin: 30px 0px;
+                    padding: 0px;
+                    position: relative;
+                    
+                    span {
+                        position: absolute;
+                        top: 0px;
+                        height: 80px;
+                        line-height: 80px;
+                        left: 80px;
+                        padding-left: 5px;
+                        display: block;
+                        color: var(--s5);
+                    }
+                    
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
         }
     }
 }
@@ -395,6 +438,13 @@ footer {
     color: #FFF;
     margin: 0px;
     padding: 10px 0px;
+    
+    #attribution {
+        a {
+            color: #FFF;
+            font-weight: 700;
+        }
+    }
 }
 
 #contactResult {
@@ -441,7 +491,7 @@ nav {
 
     #social {
         position: absolute;
-        top: 0px;
+        top: 10px;
         right: 0px;
         width: 300px;
         height: 60px;
@@ -449,7 +499,7 @@ nav {
         margin-left: 10px;
 
         .socialimg {
-            height: calc(100% - 10px);
+            height: 50px;
             margin: 5px;
         }
     }
@@ -858,7 +908,7 @@ nav {
     width: 60%;
     margin: 0px;
     font-size: 1.2em;
-    
+
     #privacy {
         padding-top: 80px;
         margin-top: -80px;
