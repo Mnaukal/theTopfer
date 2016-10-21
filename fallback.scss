@@ -178,8 +178,7 @@ nav {
             }
 
             &.randomColorEveryDay {
-                background: url(img/color-fallback.jpg) !important;
-                //background: var(--randomColorEveryDay);
+                background: #ff7f20;
 
                 .sliderbox {
                     background: rgba(0, 0, 0, 0.5);

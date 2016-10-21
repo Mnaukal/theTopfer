@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Contact form - theTopfer</title>
-        <link rel="stylesheet" href="main.css"> 
+        <link rel="stylesheet" href="main.min.css"> 
         <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
         <link rel="icon" type="image/png" href="logo-black_T.png" />
     </head>

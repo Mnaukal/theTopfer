@@ -33,9 +33,9 @@ $(document).ready(function() {
 
     $("#enableRandom").change(function(){
         if($(this).is(":checked"))
-            $("#stylesheet").attr("href", "http://randomcoloreveryday.com/stylesheet-variables.php");        
+            $("#stylesheet").attr("href", "http://randomcoloreveryday.com/stylesheet-variables");        
         else
-            $("#stylesheet").attr("href", "fallback.css");
+            $("#stylesheet").attr("href", "fallback.min.css");
         
         /*setTimeout(function() {
             start(true);
@@ -81,7 +81,7 @@ $(document).ready(function() {
     start();   
 });
 
-function start(showWarning = false) {
+function start(showWarning) {
     itemCount = $("#innerSlider").children(".slideritem").length;
     var innerWidth = $(document).innerWidth();
     $("#innerSlider").css("width", innerWidth * itemCount);
@@ -91,7 +91,7 @@ function start(showWarning = false) {
     var color = bodyStyles.getPropertyValue('--randomColorEveryDay');
     if(color == "") {
         if($("#enableRandom").is(":checked")) {
-            if(showWarning)
+            if(showWarning != null)
                 alert("Error\nThis is probably not supported in our browser");
             $("#enableRandom").prop('checked', false).trigger("change");
         }

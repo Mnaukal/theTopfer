@@ -105,46 +105,44 @@ nav {
 
 /* line 180, D:/Michal/Programovani/theTopfer/fallback.scss */
 #slider #innerSlider .slideritem.randomColorEveryDay {
-  background: url(img/color-fallback.jpg) !important; }
-  /* line 184, D:/Michal/Programovani/theTopfer/fallback.scss */
+  background: #ff7f20; }
+  /* line 183, D:/Michal/Programovani/theTopfer/fallback.scss */
   #slider #innerSlider .slideritem.randomColorEveryDay .sliderbox {
     background: rgba(0, 0, 0, 0.5);
     color: #FFF; }
 
-/* line 191, D:/Michal/Programovani/theTopfer/fallback.scss */
+/* line 190, D:/Michal/Programovani/theTopfer/fallback.scss */
 #slider #innerSlider .slideritem.m-project .sliderbox {
   background: rgba(0, 0, 0, 0.5);
   color: #FFF; }
-  /* line 194, D:/Michal/Programovani/theTopfer/fallback.scss */
+  /* line 193, D:/Michal/Programovani/theTopfer/fallback.scss */
   #slider #innerSlider .slideritem.m-project .sliderbox .moreinfo {
     color: #FFF; }
 
-/* line 204, D:/Michal/Programovani/theTopfer/fallback.scss */
+/* line 203, D:/Michal/Programovani/theTopfer/fallback.scss */
 #ribbon-wrapper #ribbon {
   background: #FFF;
   color: #151515; }
-  /* line 211, D:/Michal/Programovani/theTopfer/fallback.scss */
+  /* line 210, D:/Michal/Programovani/theTopfer/fallback.scss */
   #ribbon-wrapper #ribbon #left a {
     color: #151515; }
-  /* line 216, D:/Michal/Programovani/theTopfer/fallback.scss */
+  /* line 215, D:/Michal/Programovani/theTopfer/fallback.scss */
   #ribbon-wrapper #ribbon .slider {
     background-color: #ccc; }
-  /* line 219, D:/Michal/Programovani/theTopfer/fallback.scss */
+  /* line 218, D:/Michal/Programovani/theTopfer/fallback.scss */
   #ribbon-wrapper #ribbon .slider:before {
     background-color: white; }
-  /* line 223, D:/Michal/Programovani/theTopfer/fallback.scss */
+  /* line 222, D:/Michal/Programovani/theTopfer/fallback.scss */
   #ribbon-wrapper #ribbon input:checked + .slider {
     background-color: #4AA0C7; }
-  /* line 228, D:/Michal/Programovani/theTopfer/fallback.scss */
+  /* line 227, D:/Michal/Programovani/theTopfer/fallback.scss */
   #ribbon-wrapper #ribbon input:focus + .slider {
     box-shadow: 0 0 1px #4AA0C7; }
 
 @media screen and (max-width: 1366px) {
-  /* line 239, D:/Michal/Programovani/theTopfer/fallback.scss */
+  /* line 238, D:/Michal/Programovani/theTopfer/fallback.scss */
   section#projects .project#project1, section#projects .project#project3 {
     background-color: #ffffff; }
-  /* line 244, D:/Michal/Programovani/theTopfer/fallback.scss */
+  /* line 243, D:/Michal/Programovani/theTopfer/fallback.scss */
   section#projects .project#project2, section#projects .project#project4 {
     background-color: #ff9545; } }
-
-/*# sourceMappingURL=fallback.css.map */

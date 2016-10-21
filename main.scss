@@ -581,6 +581,7 @@ nav {
     #innerSlider {
         position: absolute;
         left: 0%;
+        width: 300%; // number of slider items * 100% - normally set in JS
         height: 100%;
         transition: 1s;
         display: flex;
@@ -615,7 +616,7 @@ nav {
                     color: rgba(255, 255, 255, 0.7);
                     opacity: 1;
                     font-size: 5em;
-                    font-weight: 300;
+                    font-weight: 400;
                     line-height: 80px;
                     left: 2%;
                     transform: none;
@@ -667,7 +668,7 @@ nav {
                     color: #FFF;
                     width: 1200px;
                     height: 400px;
-                    font-weight: 300;
+                    font-weight: 400;
                     text-align: center;
                     font-size: 2em;
                     margin-top: 5%;
@@ -798,7 +799,7 @@ nav {
         left: 0px;
         transition: 0.5s;
         font-size: 1.3em;
-        font-weight: 300;
+        font-weight: 400;
 
 
         #left {
