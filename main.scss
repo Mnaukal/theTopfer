@@ -106,9 +106,7 @@ section {
                 transform-origin: 80% 80% 0;
 
                 .project-picture {
-                    width: 250px;
                     background-color: var(--randomColorEveryDay);
-
                     color: var(--foreground-text-gray);
                     text-align: center;
                     line-height: 250px;
@@ -394,7 +392,7 @@ section {
             position: absolute;
             left: 50%;
             width: 500px;
-            
+
             ul {
                 list-style-type: none;
                 width: 450px;
@@ -403,13 +401,13 @@ section {
                 margin: 0px;
                 padding: 0px;
                 font-size: 2em;
-                
+
                 > li {
                     height: 80px;
                     margin: 30px 0px;
                     padding: 0px;
                     position: relative;
-                    
+
                     span {
                         position: absolute;
                         top: 0px;
@@ -420,7 +418,7 @@ section {
                         display: block;
                         color: var(--s5);
                     }
-                    
+
                     img {
                         height: 100%;
                     }
@@ -438,7 +436,7 @@ footer {
     color: #FFF;
     margin: 0px;
     padding: 10px 0px;
-    
+
     #attribution {
         a {
             color: #FFF;
@@ -493,7 +491,7 @@ nav {
         position: absolute;
         top: 10px;
         right: 0px;
-        width: 300px;
+        width: 320px;
         height: 60px;
         margin-right: 10px;
         margin-left: 10px;
@@ -549,6 +547,10 @@ nav {
             color: var(--s7);
         }
     }
+    #menuButton {
+        display: none;
+    }
+
 
     &.fixed {
         position: fixed;
@@ -924,6 +926,35 @@ pre {
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
+#avoider {
+    background-image: url(img/slider/m-project-blur.jpg) !important;
+    top: 80px;
+    padding: 0%;
+    margin: 0px;
+    font-size: 1.2em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+    section {
+        margin: 0% 20%;
+        width: 60%;
+        background: rgba(255,255,255,0.5);
+        margin-top: 5%;
+        text-align: center;
+    }
+    
+    #cover {
+        width: 100%;
+    }
+    
+    iframe {
+        width: 100%;
+        height: 30vw;
+    }
+}
+
 @media screen and (max-width: 1600px) {
     section#projects {
         .project {
@@ -967,22 +998,23 @@ pre {
             }
         }
     }
-}
 
-@media screen and (max-width: 1300px) {
-    #logo {
-        left: 20vw;
-        width: 60vw;
-        top: 0px;
-        transform: none;
-        height: auto;
+    nav {
+        #menu {
+            left: 170px;
+            transform: none;
 
-        .logoimg {
-            width: 100%;
-            height: auto;
+            > li {
+                font-size: 1.2em;
+                margin: 0px;
+                padding: 5px 10px;
+                width: auto;
+            }
         }
     }
 
+}
+@media screen and (max-width: 1300px) {
     section#games {
         .game {
             width: 100%;
@@ -1028,74 +1060,124 @@ pre {
         .project {
             width: 100%;
 
+            .project-picture {
+                border-radius: 50%;
+                width: 25%;
+                height: 25vw;
+                position: relative;
+                left: 3%;
+                top: 15%;
+            }
+            h2 {
+                margin-left: 30%;
+                font-size: 2em;
+            }
+            p {
+                margin-left: 30%;
+                margin-right: 20px;
+                top: 50px;
+                font-size: 1.2em;   
+            }
+            .download {
+                position: absolute;
+                bottom: 25px;
+                left: 30%;
+            }
+            .source {
+                position: absolute;
+                bottom: 25px;
+                right: 25px;
+                left: auto;
+            }
+
             &#project1, &#project3{
                 background-color: var(--t3);
+            }
+            &#project1{
+                .project-picture {
+                    font-size: 2.5em;
+                    line-height: 25vw;
+                }
             }
 
             &#project2, &#project4{
                 background-color: var(--t1);             
             }
+
         }
+
     }
+    section#contact {
+        height: 900px;
 
-    section#me {
-        height: 1300px;
+        #contactForm {
+            position: absolute;
+            left: 3%;
+            right: 10%;
+            width: 80%;  
+            top: 170px;
 
-        #team {
-            .member {
-                width: 80%;
-                height: 250px;
-                padding: 0px 10px;
-                margin: 8px 10%;
+            form {
+                position: absolute;
+                left: 25px;
+                right: 25px;
 
-                .portrait {
-                    float: left;
-                    height: 150px;
-                    width: 150px;
-                    left: 0px;
-                    margin: 50px 5px;
-                    margin-left: 25px;
+                label {
+                    font-size: 1.5em;
                 }
-
-                h2 {
-                    float: left;
-                    width: 50%;
+                input, textarea {
+                    width: 100%;
+                    padding: 10px 20px;
+                    margin: 4px auto;
                 }
-                p {
-                    float: left;
-                }
-            }
-
-            .leader {
-                height: 250px;
-                font-size: 1em;
-
-                .portrait {
-                    width: 150px;
-                    height: 150px;
-                }
-
 
             }
+            #contactFrame {
+                top: 420px;
+                left: 0px;
+                right: 0px;
+                width: 100%;  
+            }
+        }
+
+        #socialIcons {
+            position: absolute;
+            left: 78%;
+            width: 500px;
+
+            ul {
+                list-style-type: none;
+                width: 450px;
+                left: 50px;
+                position: absolute;
+                margin: 0px;
+                padding: 0px;
+                font-size: 2em;
+
+                > li {
+                    height: 80px;
+                    margin: 30px 0px;
+                    padding: 0px;
+                    position: relative;
+
+                    span {
+                        position: absolute;
+                        top: 0px;
+                        height: 80px;
+                        line-height: 80px;
+                        left: 80px;
+                        padding-left: 5px;
+                        display: none;
+                        color: var(--s5);
+                    }
+
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
         }
     }
-
-    #menu {
-        transform: translateX(-50%);
-        left: 50%;
-        margin: 0px;
-        padding: 0px;
-        height: 80px;
-
-        > li {
-            padding: 5px;
-            width: 150px;
-            float: left;
-            //clear: left;
-            font-size: 1.5em;
-        }
-    }
-
     #slider {
         #innerSlider {
             .slideritem {
@@ -1153,4 +1235,296 @@ pre {
             }
         }
     }
+    
+}
+@media screen and (max-width: 760px) {
+    #logo {
+        left: 20vw;
+        width: 60vw;
+        top: 0px;
+        transform: none;
+        height: auto;
+
+        .logoimg {
+            width: 100%;
+            height: auto;
+        }
+    }
+    section {
+        font-size: 0.6em;
+    }
+    section#games {
+        .game {
+            width: 100%;
+            height: 1000px;
+
+            &#m-project {
+                iframe, .info {
+                    float: left;
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    left: 0px;
+
+                    .play {
+                        position: absolute;
+                        width: 50%;
+                        height: 30%;
+                        left: 0px;
+
+                        img {
+                            height: 100%;
+                            width: auto;
+                            max-width: 100%;
+                        }
+                    }
+                    .moreinfo {
+                        position: absolute;
+                        width: 50%;
+                        height: 25%;
+                        left: 50%;
+                        line-height: normal;
+                        font-size: 0.8em;
+                        padding-top: 5%;
+                    }
+                }
+            }
+        }
+    }
+
+    section#projects {
+        padding-bottom: 20px;
+
+        .project {
+            width: 100%;
+
+            .project-picture {
+                border-radius: 50%;
+                width: 25%;
+                
+                position: relative;
+                left: 0px;
+                top: 0px;
+            }
+            h2 {
+                margin-left: 25%;
+                font-size: 2em;
+            }
+            p {
+                margin-left: 25%;
+                margin-right: 5px;
+                top: 50px;
+                font-size: 1.2em;   
+            }
+            .download {
+                position: absolute;
+                bottom: 25px;
+                left: 25%;
+            }
+            .source {
+                position: absolute;
+                bottom: 25px;
+                right: 25px;
+                left: auto;
+            }
+
+            &#project1, &#project3{
+                background-color: var(--t3);
+            }
+
+            &#project2, &#project4{
+                background-color: var(--t1);             
+            }
+
+        }
+
+    }
+
+    section#me {
+        height: 1300px;
+
+        #team {
+            .member {
+                width: 80%;
+                height: 250px;
+                padding: 0px 10px;
+                margin: 8px 10%;
+
+                .portrait {
+                    float: left;
+                    height: 150px;
+                    width: 150px;
+                    left: 0px;
+                    margin: 50px 5px;
+                    margin-left: 25px;
+                }
+
+                h2 {
+                    float: left;
+                    width: 50%;
+                }
+                p {
+                    float: left;
+                }
+            }
+
+            .leader {
+                height: 250px;
+                font-size: 1em;
+
+                .portrait {
+                    width: 150px;
+                    height: 150px;
+                }
+
+
+            }
+        }
+    }
+
+    section#contact {
+        height: 720px;
+
+        #contactForm {
+            position: absolute;
+            left: 10%;
+            right: 10%;
+            width: 80%;  
+            top: 170px;
+            
+            form {
+                position: absolute;
+                left: 25px;
+                right: 25px;
+
+                label {
+                    font-size: 1.5em;
+                }
+                input, textarea {
+                    width: 100%;
+                    padding: 10px 20px;
+                    margin: 4px auto;
+                }
+
+            }
+            #contactFrame {
+                top: 420px;
+                left: 0px;
+                right: 0px;
+                width: 100%;  
+            }
+        }
+        
+        #socialIcons {
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            top: 100px;
+
+            ul {
+                list-style-type: none;
+                width: 90%;
+                left:8%; 
+                position: absolute;
+                margin: 0px;
+                padding: 0px;
+                font-size: 2em;
+
+                > li {
+                    width: 12%;
+                    margin: 2%;
+                    padding: 0px;
+                    position: relative;
+                    float: left;
+
+                    span {
+                        display: none;
+                        position: absolute;
+                        top: 0px;
+                        height: 80px;
+                        line-height: 80px;
+                        left: 80px;
+                        padding-left: 5px;
+                        color: var(--s5);
+                    }
+
+                    img {
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    nav {
+        #logo-small {
+            opacity: 1;
+        }        
+        #menu {
+            left: 0%;
+            right: 0%;
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            transform: none;
+            position: absolute;
+            display: none;
+            top: 100%;
+
+            > li {
+                padding: 0px;
+                width: 100%;
+                float: left;
+                clear: left;
+                font-size: 1.5em;
+            }
+        }
+
+        #social {
+            top: 290px;
+            margin: auto;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            display: none;
+            background: var(--t7);
+
+            a {
+                height: 50px;
+                width: 20%;
+                float: left;
+                margin: auto;
+
+                .socialimg {
+                    margin-left: 25%;
+                }
+            }
+        }
+
+        #menuButton {
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+
+            line {
+                stroke: var(--s2);
+            }
+        }
+    }
+    nav.fixed {
+        #ribbon-wrapper {
+            display: none;
+        }
+    }
+
+    nav.hover {
+        #menu, #social, #ribbon-wrapper {
+            display: block;
+            
+        }
+    }
+    
+  
 }

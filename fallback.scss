@@ -91,27 +91,26 @@ section {
         }       
     }
     &#contact {
-
-
-        form {
-            color: #282828;
-
-            input, textarea {
-            //    border: 2px solid var(--s6);
-                border: 2px solid #ff9545;
-                background: #FFF;
-            }
-
-
-            input[type=submit] {
-                background: #ff9545;
-               // background: var(--s6);
-                color: white;
-          
+        #contactForm {
+            form {
+                input, textarea {
+                    border: 2px solid #282828;
+                }
+                input[type=submit] {
+                    background: #ff7f20;
+                }
             }
         }
-        #contactFrame {
-            color: white;
+        #socialIcons {
+            ul {
+                > li {
+
+                    span {
+                        color: #282828;
+                    }
+
+                }
+            }
         }
     }
 }
@@ -229,6 +228,10 @@ nav {
             //box-shadow: 0 0 1px var(--randomColorEveryDay);
         }
     }
+}
+
+footer {
+    background: #ff7f20;
 }
 
 @media screen and (max-width: 1366px) {

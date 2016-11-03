@@ -30,6 +30,18 @@ $(document).ready(function() {
     $(".member").mouseleave(function() {
         $(this).removeClass("leader");
     });
+    
+    $("nav").mouseenter(function() {
+       $(this).addClass("hover");
+    });
+    $("nav").mouseleave(function() {
+        $(this).removeClass("hover");
+    });
+    $("#menuButton").click(function() {
+        if(!$("nav").hasClass("fixed"))
+            scrollToAnchor("#games");
+        $("nav").toggleClass("hover");
+    });
 
     $("#enableRandom").change(function(){
         if($(this).is(":checked"))
@@ -127,6 +139,7 @@ function scrollToAnchor(selector){
     $('html,body').animate({
         scrollTop: aTag.offset().top - 80
     },'slow');
+    $("nav").removeClass("hover");
 }
 
 var waitForFinalEvent = (function () {
